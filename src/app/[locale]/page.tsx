@@ -1,7 +1,10 @@
 
 import Banner from './banner';
 import Events from './events';
+import Gallery from './gallery';
 import Menu from './menu';
+import Story from './story';
+
 
 export default function HomePage() {
 
@@ -10,6 +13,8 @@ export default function HomePage() {
       <Banner></Banner>
       <Menu></Menu>
       <Events></Events>
+      <Story></Story>
+      <Gallery></Gallery>
     </div>
   );
 }
