@@ -10,15 +10,13 @@ export const metadata: Metadata = {
   description: 'A Desired Meal',
 };
 
-export default async function LocaleLayout({
-  children,
-  params,
-}: {
+type Props = {
   children: ReactNode;
-  params: { locale: string } | Promise<{ locale: string }>;
-}) {
-  // If params is Promise, await it
-  const resolvedParams = params instanceof Promise ? await params : params;
+  params: Promise<{ locale: string }>; // <-- params must be a Promise
+};
+
+export default async function LocaleLayout({ children, params }: Props) {
+  const resolvedParams = await params;
   const { locale } = resolvedParams;
 
   if (!hasLocale(routing.locales, locale)) {
@@ -28,9 +26,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body>
-        <NextIntlClientProvider locale={locale}>
-          {children}
-        </NextIntlClientProvider>
+        <NextIntlClientProvider locale={locale}>{children}</NextIntlClientProvider>
       </body>
     </html>
   );
