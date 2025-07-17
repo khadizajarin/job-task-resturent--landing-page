@@ -28,5 +28,23 @@
       "title": "We have a table for you",
       "button": "Make a Reservation"
     }
+  },
+  "Menu": {
+    "title": "A Tavola",
+    "description": "The menu at Big Spuntino is a warm tribute to Italy’s culinary heritage...",
+    "blocks": {
+      "brunch": "Brunch",
+      "lunch": "Lunch",
+      "dinner": "Dinner",
+      "bar": "Bar"
+    },
+    "viewMenu": "View Full Menu (PDF)"
+  },
+  "Events": {
+    "title": "Events",
+    "paragraph1": "Life is always beautiful... and there is always a reason to celebrate. The Big Spuntino lives Italian hospitality and coming together – and not only in the day bar itself, but also in its own private or business premises.",
+    "paragraph2": "The Big Spuntino is already working diligently on spettacolo event series…",
+    "comingSoon": "Soon to come – stay tuned.",
+    "contact": "Contatto"
   }
 }

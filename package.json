@@ -9,10 +9,12 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "formik": "^2.4.6",
     "iconify": "^1.4.0",
     "lucide": "^0.525.0",
     "lucide-react": "^0.525.0",
+    "motion": "^12.23.6",
     "next": "^15.4.1",
     "next-intl": "^4.3.4",
     "postcss": "^8.5.6",
@@ -23,6 +25,7 @@
     "@iconify/react": "^6.0.0",
     "@iconify/tailwind4": "^1.0.6",
     "@tailwindcss/postcss": "^4.1.11",
+    "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",

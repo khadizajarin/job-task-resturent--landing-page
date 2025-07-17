@@ -28,5 +28,23 @@
       "title": "Wir haben einen Tisch für Sie",
       "button": "Reservieren"
     }
+  },
+  "Menu": {
+    "title": "A Tavola",
+    "description": "Die Speisekarte im Big Spuntino ist eine warme Hommage an das kulinarische Erbe Italiens...",
+    "blocks": {
+      "brunch": "Brunch",
+      "lunch": "Mittagessen",
+      "dinner": "Abendessen",
+      "bar": "Bar"
+    },
+    "viewMenu": "Vollständige Speisekarte ansehen (PDF)"
+  },
+  "Events": {
+    "title": "Eventi",
+    "paragraph1": "La vita é bella …und es gibt immer einen Grund um zu feiern. Das Big Spuntino lebt die italienische Gastfreundschaft – und das nicht nur in der Tagesbar selbst, sondern auch in eigenen privaten oder geschäftlichen Räumen.",
+    "paragraph2": "Das Big Spuntino arbeitet bereits fleißig an der Veranstaltungsreihe spettacolo…",
+    "comingSoon": "Demnächst – bleib dran.",
+    "contact": "Contatto"
   }
 }
