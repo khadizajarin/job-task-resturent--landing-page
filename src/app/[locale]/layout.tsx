@@ -3,6 +3,8 @@ import {notFound} from 'next/navigation';
 import {routing} from './../../i18n/routing';
 import '../../app/globals.css';
 import type { Metadata } from 'next';
+import { ReactNode } from 'react';
+
 
 
 export const metadata: Metadata = {
@@ -10,14 +12,14 @@ export const metadata: Metadata = {
     description: 'A Desired Meal',
 };
 
+type Props = {
+  children: ReactNode;
+  params: {
+    locale: string;
+  };
+};
  
-export default async function LocaleLayout({
-  children,
-  params
-}: {
-  children: React.ReactNode;
-  params: { locale: string }; 
-}) {
+export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = params;
 
   if (!hasLocale(routing.locales, locale)) {
