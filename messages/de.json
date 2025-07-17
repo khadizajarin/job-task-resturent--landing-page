@@ -1,0 +1,32 @@
+{
+  "HomePage": {
+    "title": "Hello world!ggggggggggg",
+    "about": "Go to the about pagejkdwfdef"
+  },
+  "about":{
+    "title":"Hello world! this is abouttttttttttttttttt",
+    "about": "Go to the about home"
+  },
+  "Banner": {
+    "menu": "Menü",
+    "nav": {
+      "home": "Startseite",
+      "menu": "Speisekarte",
+      "reservation": "Reservierung",
+      "events": "Veranstaltungen",
+      "contact": "Kontakt",
+      "stories": "Unsere Geschichten"
+    },
+    "brand": "BigSpuntino",
+    "social": {
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "pinterest": "Pinterest"
+    },
+    "language": "DEU",
+    "hero": {
+      "title": "Wir haben einen Tisch für Sie",
+      "button": "Reservieren"
+    }
+  }
+}
