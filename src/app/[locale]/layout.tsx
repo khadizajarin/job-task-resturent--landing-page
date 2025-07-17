@@ -10,16 +10,16 @@ export const metadata: Metadata = {
   description: 'A Desired Meal',
 };
 
-// ✅ Define props type explicitly (not using LayoutProps)
-type Props = {
+export default async function LocaleLayout({
+  children,
+  params,
+}: {
   children: ReactNode;
-  params: {
-    locale: string;
-  };
-};
-
-export default async function LocaleLayout({ children, params }: Props) {
-  const { locale } = params;
+  params: { locale: string } | Promise<{ locale: string }>;
+}) {
+  // If params is Promise, await it
+  const resolvedParams = params instanceof Promise ? await params : params;
+  const { locale } = resolvedParams;
 
   if (!hasLocale(routing.locales, locale)) {
     notFound();
