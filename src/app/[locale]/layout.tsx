@@ -4,17 +4,21 @@ import { routing } from './../../i18n/routing';
 import '../../app/globals.css';
 import type { Metadata } from 'next';
 import type { ReactNode } from 'react';
-import type { LayoutProps } from 'next'; // ✅ This is the key
 
 export const metadata: Metadata = {
   title: 'Bigspontino',
   description: 'A Desired Meal',
 };
 
-export default async function LocaleLayout({
-  children,
-  params,
-}: LayoutProps<{ locale: string }>) {
+// ✅ Define props type explicitly (not using LayoutProps)
+type Props = {
+  children: ReactNode;
+  params: {
+    locale: string;
+  };
+};
+
+export default async function LocaleLayout({ children, params }: Props) {
   const { locale } = params;
 
   if (!hasLocale(routing.locales, locale)) {
