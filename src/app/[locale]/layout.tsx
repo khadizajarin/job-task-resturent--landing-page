@@ -5,15 +5,9 @@ import '../../app/globals.css';
 import type { Metadata } from 'next';
 
 
-export const generateMetadata = async ({
-  params,
-}: {
-  params: { locale: string };
-}): Promise<Metadata> => {
-  return {
+export const metadata: Metadata = {
     title: 'Bigspontino',
     description: 'A Desired Meal',
-  };
 };
 
  
