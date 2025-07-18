@@ -194,11 +194,11 @@ export default function Banner() {
 
 
         {/* Corner images */}
-        <div className="absolute -top-12 -left-5 w-20 h-20 flex items-center justify-center z-20">
+        <div className="absolute top-3 -left-5 w-20 h-20 flex items-center justify-center z-20">
           <PiStarFourFill className='w-5 h-5'/>
           {/* <Image src="/images/dropdown-01.png" alt="Top Left" width={40} he/>ight={40} priority /> */}
         </div>
-        <div className="absolute -top-12 -right-5 w-20 h-20 flex items-center justify-center z-20">
+        <div className="absolute top-3 -right-5 w-20 h-20 flex items-center justify-center z-20">
           <PiStarFourFill className='w-5 h-5'/>
         </div>
         <div className="absolute -bottom-5 -left-5 w-20 h-20 flex items-center justify-center z-20">
