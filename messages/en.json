@@ -55,5 +55,24 @@
     "title": "Contact & Opening Hours",
     "description": "The Big Spuntino is a classic day bar where the Spuntini can be tasted all day long.",
     "openingHours": "Opening Hours:"
+  },
+  "Job": {
+    "title": "Jobs",
+    "quote": "Andiamo – You want to become part of the Famiglia and work in the happiest day bar in Hamburg?",
+    "description": "Then get in touch with our team – we look forward to receiving your applications!",
+    "applyNow": "Apply Now"
+  },
+  "Reservation": {
+  "title": "Reservation",
+  "description": "Reserve your table at Big Spuntino and enjoy a delightful experience.",
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "date": "Date",
+    "time": "Time",
+    "message": "Message",
+    "messagePlaceholder": "Special requests or notes...",
+    "submit": "Book Now"
   }
+}
 }

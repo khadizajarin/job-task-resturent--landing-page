@@ -55,5 +55,25 @@
     "title": "Kontakt & Öffnungszeiten",
     "description": "Das Big Spuntino ist eine klassische Tagesbar, in denen die Spuntini ganztags verköstigt werden können.",
     "openingHours": "Öffnungszeiten:"
+  },
+   "Job": {
+    "title": "Lavori",
+    "quote": "Andiamo – Ihr wollt Teil der Famiglia werden und in der fröhlichsten Tagesbar Hamburgs arbeiten?",
+    "description": "Dann nehmt Kontakt mit unserem Team auf – wir freuen uns auf eure Bewerbungen!",
+    "applyNow": "Jetzt Bewerben"
+  },
+  "Reservation": {
+  "title": "Reservierung",
+  "description": "Reservieren Sie Ihren Tisch im Big Spuntino und genießen Sie ein unvergessliches Erlebnis.",
+  "form": {
+    "name": "Name",
+    "email": "E-Mail",
+    "date": "Datum",
+    "time": "Uhrzeit",
+    "message": "Nachricht",
+    "messagePlaceholder": "Besondere Wünsche oder Hinweise...",
+    "submit": "Jetzt reservieren"
   }
+}
+
 }
