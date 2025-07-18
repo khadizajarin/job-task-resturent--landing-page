@@ -7,12 +7,14 @@ import Job from './job';
 import Menu from './menu';
 import Story from './story';
 import ReservationPage from './reservation';
+// import Navbar from './navbar';
 
 
 export default function HomePage() {
 
   return (
     <div>
+      {/* <Navbar></Navbar> */}
       <Banner></Banner>
       <Menu></Menu>
       <Events></Events>

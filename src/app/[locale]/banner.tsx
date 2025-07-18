@@ -11,6 +11,7 @@ import ReservationModal from '../../../src/components/ReservationModal';
 import { useTranslations } from 'next-intl';
 import {Link, usePathname, useRouter} from '../../i18n/navigation';
 import {routing} from '../../i18n/routing';
+import { PiStarFourFill } from "react-icons/pi";
 
 const pacifico = Pacifico({
   weight: '400',
@@ -41,12 +42,12 @@ export default function Banner() {
     const hasVisited = sessionStorage.getItem('true');
 
     if (!hasVisited) {
-      setShowModal(true); // Show modal
-      sessionStorage.setItem('hasVisited', 'true'); // Mark as visited
+      setShowModal(true); 
+      sessionStorage.setItem('hasVisited', 'true'); 
     }
   }, []);
 
-    const pathname = usePathname(); // current path without locale prefix
+    const pathname = usePathname();
     const router = useRouter();
   
     const handleLocaleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -57,7 +58,69 @@ export default function Banner() {
     
 
   return (
-    <div className="relative h-screen w-full text-white overflow-hidden">
+    <div className="relative">
+     <header className="w-full bg-transparent text-white py-4 fixed top-0 z-50">
+  <div className="mx-auto max-w-7xl px-4 flex items-center justify-between">
+    
+    {/* Social- Left */}
+    <div className="flex items-center gap-4 text-sm uppercase">
+      <div className="flex gap-2">
+        <Icon icon="fa6-brands:facebook" className="w-5 h-5 text-white" />
+        <Icon icon="fa6-brands:square-instagram" className="w-5 h-5 text-white" />
+        <Icon icon="fa6-brands:pinterest" className="w-5 h-5 text-white" />
+      </div>
+    </div>
+
+    {/* Marquee Centered */}
+    <div className="relative flex-1 mx-4 overflow-hidden">
+      <div className="whitespace-nowrap animate-[slide-left_30s_linear_infinite] text-sm text-center">
+        OPENING HOURS: Wed–Fri: 11:00 – 23:00 | Sat: 10:00 – 23:00 | Sun: 10:00 – 17:00
+      </div>
+    </div>
+
+    {/* Language - Right (same as left) */}
+    <div className="flex items-center gap-4 text-sm uppercase">
+      <select
+        id="locale-select-right"
+        onChange={handleLocaleChange}
+        className="bg-transparent text-white text-sm px-2 py-1 border border-white focus:outline-none focus:ring-0"
+        style={{
+          backgroundColor: 'transparent',
+          color: 'white',
+          WebkitAppearance: 'none',
+          MozAppearance: 'none',
+          appearance: 'none',
+        }}
+      >
+        {routing.locales.map((locale) => (
+          <option
+            key={locale}
+            value={locale}
+            className="bg-black text-white"
+          >
+            {locale.toUpperCase()}
+          </option>
+        ))}
+      </select>
+    </div>
+  </div>
+
+  <style jsx global>{`
+    @keyframes slide-left {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
+  `}</style>
+</header>
+
+
+
+      <div className="relative h-screen w-full text-white overflow-hidden">
+      
       {/* Background */}
       <div className="fixed top-0 left-0 w-full h-screen -z-20">
         <Image
@@ -73,88 +136,18 @@ export default function Banner() {
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/40 -z-10" />
 
-      {/* Sidebar */}
-      <div
-        className={`fixed top-0 left-0 h-full w-[49rem] backdrop-blur-md z-50 transform transition-transform duration-300 ${
-          sidebarOpen ? 'translate-x-0' : '-translate-x-full'
-        }`}
-      >
-        <div className="flex items-center justify-between px-4 py-4 border-b border-white">
-          <h2 className="text-xl uppercase tracking-wider pl-20">Menu</h2>
-          <button onClick={() => setSidebarOpen(false)}>
-            <X className="w-6 h-6 text-white" />
-          </button>
-        </div>
-        <ul className="px-20 py-20 space-y-5 uppercase tracking-widest text-3xl">
-        {[
-            { key: 'home', label: t('nav.home') },
-            { key: 'menu', label: t('nav.menu') },
-            { key: 'reservation', label: t('nav.reservation') },
-            { key: 'events', label: t('nav.events') },
-            { key: 'contact', label: t('nav.contact') },
-            { key: 'stories', label: t('nav.stories') }
-        ].map((item, index) => (
-            <li
-            key={index}
-            className="flex items-center gap-4 text-5xl font-semibold hover:tracking-[0.25em] transition-all duration-300 pb-6"
-            >
-            <Image
-                src="/images/dropdown-01.png"
-                alt={`${item.label} icon`}
-                width={40}
-                height={40}
-                priority
-            />
-            {item.label}
-            </li>
-        ))}
-        </ul>
-
-        <h2 className={`text-2xl md:text-3xl tracking-[0.35em] uppercase text-center ${pacifico.className}`}>
-                BigSpuntino
-        </h2>
-
-      </div>
 
       {/* Content */}
       <div className=" z-10 flex flex-col h-full">
 
         <div className="px-40 pt-36 flex items-center justify-between relative">
-            {/* Sidebar Toggle - Left */}
-            <button
-                onClick={() => setSidebarOpen(true)}
-                className="p-2 hover:bg-white/20 transition animate-pulse mr-40"
-            >
-                <Logs className="w-10 h-10 text-white" />
-            </button>
-
             {/* Logo - Center */}
-            <div className="flex-1 text-center">
-                <h2 className={`text-4xl md:text-5xl tracking-[0.35em] uppercase ${pacifico.className}`}>
-                BigSpuntino
-                </h2>
-            </div>
-
-            {/* Social + Language - Right */}
-            <div className="flex items-center gap-4 text-sm uppercase">
-                <div className="flex gap-2">
-                <Icon icon="fa6-brands:facebook" className="w-6 h-6 text-white" />
-                <Icon icon="fa6-brands:square-instagram" className="w-6 h-6 text-white" />
-                <Icon icon="fa6-brands:pinterest" className="w-6 h-6 text-white" />
-                </div>
-                <select id="locale-select" onChange={handleLocaleChange} className="bg-transparent text-white text-sm lg:text-base px-2 py-1 border border-white focus:outline-none focus:ring-0 focus:border-transparent focus:outline-none focus:ring-1 focus:ring-white/50" style={{
-                    backgroundColor: 'transparent',
-                    color: 'white',
-                    WebkitAppearance: 'none',
-                    MozAppearance: 'none',
-                    appearance: 'none',
-                }}> 
-                {routing.locales.map((locale) => (
-                    <option key={locale} value={locale} className="bg-black text-white hover:bg-white hover:text-black border-0 border-transparent" >
-                    {locale.toUpperCase()}
-                    </option>
-                ))}
-                </select>
+            <div className="flex-1 text-center absolute top-4 left-1/2 -translate-x-1/2">
+              <Image
+                src="/images/logo-01.png"
+                alt="Background"
+                width={400} height={400}
+              />
             </div>
         </div>
 
@@ -165,69 +158,62 @@ export default function Banner() {
           <h1 className="text-7xl md:text-5xl font-bold tracking-[0.3em] uppercase mb-6">
             {t('hero.title')}
           </h1>
-          <Button  href="/reservation" className="uppercase ">
-                {t('hero.button')}
-          </Button>
+          <h3  className="uppercase ">
+                {t('hero.subtitle')}
+          </h3>
         </div>
       </div>
 
+
+
       {/* Decorative Borders */}
-      <div className="pointer-events-none absolute inset-[5rem] z-10">
+      <div className="pointer-events-none absolute inset-[3rem] z-  10">
         {/* Border lines */}
-        <div
-        className={`absolute top-0 border-t-2 border-white transition-all duration-500
-            ${sidebarOpen
-            ? 'left-1/2 w-[45.2%] -translate-x-0'
-            : 'left-1/2 w-[90.5%] -translate-x-1/2'
-            }`}
-        />
-        <div
-        className={`absolute bottom-0 border-b-2 border-white transition-all duration-500
-            ${sidebarOpen
-            ? 'left-1/2 w-[45.2%] -translate-x-0'
-            : 'left-1/2 w-[90.5%] -translate-x-1/2'
-            }`}
-        />
+        {/* TOP BORDER LEFT PART */}
+        <div className="absolute top-8 left-20 w-[35rem] border-t-2 border-white" />
 
-        <div className="absolute top-1/2 right-0 h-[79.5%] border-r-2 border-white -translate-y-1/2" />
+        {/* TOP BORDER RIGHT PART */}
+        <div className="absolute top-8 right-20 w-[35rem] border-t-2 border-white" />
 
-        {!sidebarOpen && (
-        <div className="absolute top-1/2 left-0 h-[79.5%] border-l-2 border-white -translate-y-1/2" />
-        )}
+        {/* BOTTOM BORDER */}
+        <div className="absolute bottom-0 left-1/2 w-[98.7rem] -translate-x-1/2 border-b-2 border-white" />
 
-        
+        <div className="absolute top-1/2 right-0 h-[77%] border-r-2 border-white -translate-y-[47.5%]" />
+        <div className="absolute top-1/2 left-0 h-[77%] border-l-2 border-white -translate-y-[47.5%]" />
+  
+
+                
 
         {/* Corner curves */}
         {/* Top-left curve (conditionally hidden when sidebar is open) */}
-        {!sidebarOpen && (
-        <div className="absolute top-0 left-0 w-20 h-20 border-b-2 border-r-2 border-white rounded-br-full z-10" />
-        )}
+        <div className="absolute top-8 left-0 w-20 h-20 border-b-2 border-r-2 border-white rounded-br-full z-10" />
         {/* Bottom-left curve (conditionally hidden when sidebar is open) */}
-        {!sidebarOpen && (
         <div className="absolute bottom-0 left-0 w-20 h-20 border-t-2 border-r-2 border-white rounded-tr-full z-10" />
-        )}
         <div className="absolute bottom-0 right-0 w-20 h-20 border-t-2 border-l-2 border-white rounded-tl-full z-10" />
-        <div className="absolute top-0 right-0 w-20 h-20 border-b-2 border-l-2 border-white rounded-bl-full z-10" />
+        <div className="absolute top-8 right-0 w-20 h-20 border-b-2 border-l-2 border-white rounded-bl-full z-10" />
 
 
         {/* Corner images */}
-        <div className="absolute -top-5 -left-5 w-20 h-20 flex items-center justify-center z-20">
-          <Image src="/images/dropdown-01.png" alt="Top Left" width={40} height={40} priority />
+        <div className="absolute -top-12 -left-5 w-20 h-20 flex items-center justify-center z-20">
+          <PiStarFourFill className='w-5 h-5'/>
+          {/* <Image src="/images/dropdown-01.png" alt="Top Left" width={40} he/>ight={40} priority /> */}
         </div>
-        <div className="absolute -top-5 -right-5 w-20 h-20 flex items-center justify-center z-20">
-          <Image src="/images/dropdown-01.png" alt="Top Right" width={40} height={40} priority />
+        <div className="absolute -top-12 -right-5 w-20 h-20 flex items-center justify-center z-20">
+          <PiStarFourFill className='w-5 h-5'/>
         </div>
         <div className="absolute -bottom-5 -left-5 w-20 h-20 flex items-center justify-center z-20">
-          <Image src="/images/dropdown-01.png" alt="Bottom Left" width={40} height={40} priority />
+          <PiStarFourFill className='w-5 h-5'/>
         </div>
         <div className="absolute -bottom-5 -right-5 w-20 h-20 flex items-center justify-center z-20">
-          <Image src="/images/dropdown-01.png" alt="Bottom Right" width={40} height={40} priority />
+          <PiStarFourFill className='w-5 h-5'/>
         </div>
 
         
       </div>
 
         <ReservationModal isOpen={showModal} onClose={() => setShowModal(false)} />
+      </div>
     </div>
+    
   );
 }
