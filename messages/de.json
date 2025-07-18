@@ -30,15 +30,19 @@
     }
   },
   "Menu": {
-    "title": "A Tavola",
-    "description": "Die Speisekarte im Big Spuntino ist eine warme Hommage an das kulinarische Erbe Italiens...",
-    "blocks": {
-      "brunch": "Brunch",
-      "lunch": "Mittagessen",
-      "dinner": "Abendessen",
-      "bar": "Bar"
-    },
-    "viewMenu": "Vollständige Speisekarte ansehen (PDF)"
+      "title": "A Tavola",
+      "description1": "Die Speisekarte des Big Spuntino ist eine herzliche Hommage an Italiens kulinarisches Erbe.",
+      "description2": "Von Insalata Caprese und Pulpo bis hin zu den knusprigsten Foccacia bietet unsere Speisekarte eine exquisite Auswahl an klassischen Spuntini (Snacks).",
+      "description3": "Dies gilt natürlich auch für die Dolci: Von der traditionellen Creme die Mascarpone bis hin zu den fluffig leichten Maritozzi versüßt das Big Spuntino den Alltag mit den Churros all italiana – neapolitanische Doughnut-Stangen, warm serviert und perfekt zum Eintauchen in geschmolzene Schokolade mit besonderen Toppings.",
+      "description4": "Ergänzend zum kulinarischen Erlebnis können klassische italienisch-kosmopolitische Cocktails und Weine aus Nord und Süd verkostet werden.",
+      "description5": "Die Essenz eines italienischen Sommers wird mit einem spritzigen Spritz zum Leben erweckt, während die besonderen Aromen unseres Signature-Cocktails Spuntino 75 der perfekte Auftakt für einen genussvollen Abend sind.",
+      "viewMenu": "Gesamte Speisekarte ansehen",
+      "blocks": {
+        "brunch": "Brunch",
+        "lunch": "Mittagessen",
+        "dinner": "Abendessen",
+        "bar": "Bar"
+    }
   },
   "Events": {
     "title": "Eventi",
@@ -46,6 +50,10 @@
     "paragraph2": "Das Big Spuntino arbeitet bereits fleißig an der Veranstaltungsreihe spettacolo…",
     "comingSoon": "Demnächst – bleib dran.",
     "contact": "Contatto"
+  },
+   "gallery": {
+    "title": "Galerie",
+    "subtitle": "Visuelle Eindrücke von Big Spuntino"
   },
    "Story": {
     "title": "La Storia (Geschichte)",

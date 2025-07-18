@@ -4,6 +4,23 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import { X } from 'lucide-react';
+import { Cinzel_Decorative } from 'next/font/google';
+import { Cinzel } from 'next/font/google';
+import { Poppins } from 'next/font/google';
+import { useTranslations } from 'next-intl';
+
+const cinzel = Cinzel({ subsets: ['latin'], weight: ['400', '700'] });
+
+const cinzelDecorative = Cinzel_Decorative({
+  subsets: ['latin'],
+  weight: ['400', '700', '900'], // Choose weights you need
+});
+
+export const poppins = Poppins({
+  weight: ['600'], // SemiBold
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 const images = [
   { src: '/images/gallery1.png', alt: 'Italian Dishes' },
@@ -12,105 +29,69 @@ const images = [
   { src: '/images/gallery4.png', alt: 'Guests Enjoying Meal' },
   { src: '/images/gallery5.png', alt: 'Bar and Aperitivo' },
   { src: '/images/gallery6.png', alt: 'Outdoor Seating' },
-//   { src: '/images/gallery7.png', alt: 'Fresh Pasta Making' },
-//   { src: '/images/gallery8.png', alt: 'Cozy Evening Setup' },
-//   { src: '/images/gallery9.png', alt: 'Seasonal Ingredients' },
-//   { src: '/images/gallery10.png', alt: 'Wine Selection' },
-//   { src: '/images/gallery11.png', alt: 'Family Gathering' },
-//   { src: '/images/gallery12.png', alt: 'Italian Decor' },
-//   { src: '/images/gallery13.png', alt: 'Chef’s Special Dish' }
 ];
 
 export default function GalleryMosaic() {
   const [selected, setSelected] = useState<number | null>(null);
+  const t = useTranslations('gallery');
 
   return (
-    <section className="bg-white py-16 px-6 lg:px-24">
-      <div className="max-w-6xl mx-auto text-center mb-12">
-        <h2 className="text-4xl font-bold text-gray-800 mb-2">Gallery</h2>
-        <p className="text-gray-500 text-base">Visual flavors of Big Spuntino</p>
-      </div>
+    <section className="bg-white h-screen overflow-hidden py-20 px-10 sm:px-12 lg:px-20 ">
+      <div className="max-w-7xl mx-auto px-4 h-full flex flex-col md:flex-row items-center justify-center gap-11">
+        
+        {/* Mosaic Layout - Left Side */}
+        <div className="grid grid-cols-4 auto-rows-[13rem] gap-4 flex-1 w-full h-full lg:w-7/12 ">
+          {images.map((img, i) => {
+            const spanClass = (() => {
+              switch (i) {
+                case 0: return 'col-span-1 row-span-1';
+                case 1: return 'col-span-1 row-span-1';
+                case 2: return 'col-span-2 row-span-2';
+                case 3: return 'col-span-2 row-span-2';
+                case 4: return 'col-span-1 row-span-1';
+                case 5: return 'col-span-1 row-span-1';
+              }
+            })();
 
-      {/* Mosaic Layout */}
-      <div className="grid grid-cols-6 auto-rows-[150px] gap-4">
-        {images.map((img, i) => {
-          const spanClass = (() => {
-            switch (i) {
-              case 0: return 'col-span-3 row-span-2';
-              case 1: return 'col-span-3 row-span-1';
-              case 2: return 'col-span-1 row-span-1';
-              case 3: return 'col-span-2 row-span-2';
-              case 4: return 'col-span-2 row-span-1';
-              case 5: return 'col-span-2 row-span-1';
-            //   case 6: return 'col-span-3 row-span-1';
-            //   case 7: return 'col-span-2 row-span-2';
-            //   case 8: return 'col-span-1 row-span-1';  // adjusted from 2 to 1 to balance right side
-            //   case 9: return 'col-span-2 row-span-2';
-            //   case 10: return 'col-span-2 row-span-1';
-            //   case 11: return 'col-span-2 row-span-1';
-            //   case 12: return 'col-span-1 row-span-1';  // new image to fill right side gap
-            //   default: return 'col-span-2 row-span-1';
-            }
-          })();
-
-          return (
-            <motion.div
-              key={i}
-              className={`relative rounded-xl overflow-hidden cursor-pointer group shadow-lg ${spanClass}`}
-              onClick={() => setSelected(i)}
-              initial={{ opacity: 0, scale: 0.9 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.5, delay: i * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <Image
-                src={img.src}
-                alt={img.alt}
-                fill
-                className="object-cover transition-transform duration-500 group-hover:scale-105"
-              />
-              <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white p-2 text-sm opacity-0 group-hover:opacity-100 transition-all duration-300">
-                {img.alt}
-              </div>
-            </motion.div>
-          );
-        })}
-      </div>
-
-      {/* Lightbox Modal */}
-      <AnimatePresence>
-        {selected !== null && (
-          <motion.div
-            className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            onClick={() => setSelected(null)}
-          >
-            <motion.div
-              className="relative max-w-4xl max-h-[90vh] w-full"
-              initial={{ scale: 0.9 }}
-              animate={{ scale: 1 }}
-              exit={{ scale: 0.9 }}
-              onClick={(e) => e.stopPropagation()}
-            >
-              <Image
-                src={images[selected].src}
-                alt={images[selected].alt}
-                width={1200}
-                height={800}
-                className="rounded-xl object-contain w-full max-h-[80vh]"
-              />
-              <button
-                onClick={() => setSelected(null)}
-                className="absolute top-3 right-3 text-white bg-black/50 hover:bg-black/70 p-2 rounded-full"
+            return (
+              <motion.div
+                key={i}
+                className={`relative overflow-hidden cursor-pointer group shadow-lg ${spanClass}`}
+                onClick={() => setSelected(i)}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5, delay: i * 0.1 }}
+                viewport={{ once: true }}
               >
-                <X size={24} />
-              </button>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <div className={`absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent text-white p-2 text-sm opacity-0 font-black group-hover:opacity-100 transition-all duration-300 ${cinzel.className}`}>
+                  {img.alt}
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+
+        {/* Text Content - Right Side */}
+        <div className="relative z-20 w-full lg:w-5/12 max-w-xl text-black px-4 lg:px-0 text-right">
+          <h2 className={`text-5xl font-serif mb-6 uppercase text-[#c0462d] font-black ${cinzelDecorative.className}`}>
+            <span className="border-b-[3px] border-[#c0462d] pb-4 inline-block w-fit">
+              {t('title')}
+            </span>
+          </h2>
+          <p className={`text-[1.12rem] leading-tight whitespace-pre-line mb-6 ${poppins.className}`}>
+            {t('subtitle')}
+          </p>
+        </div>
+
+      </div>
     </section>
+
   );
 }

@@ -28,7 +28,6 @@ const cinzelDecorative = Cinzel_Decorative({
 
 export default function Banner() {
   const t = useTranslations('Banner');
-  const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const [showModal, setShowModal] = useState(false);
 

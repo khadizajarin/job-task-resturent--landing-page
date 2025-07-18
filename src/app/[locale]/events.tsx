@@ -4,104 +4,104 @@ import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
 import Link from 'next/link';
+import { Cinzel_Decorative } from 'next/font/google';
+import { Cinzel } from 'next/font/google';
+import { Poppins } from 'next/font/google';
+
+const cinzel = Cinzel({ subsets: ['latin'], weight: ['400', '700'] });
+
+const cinzelDecorative = Cinzel_Decorative({
+  subsets: ['latin'],
+  weight: ['400', '700', '900'], // Choose weights you need
+});
+
+export const poppins = Poppins({
+  weight: ['600'], // SemiBold
+  subsets: ['latin'],
+  display: 'swap',
+});
 
 export default function Events() {
   const t = useTranslations('Events');
 
   return (
-    <section className="relative bg-[#fdeee6] overflow-hidden py-20 px-10 sm:px-12 lg:px-20 ">
-        <div className="max-w-[1200px] flex flex-col lg:flex-row items-center justify-between  mx-auto">
-             {/* Text Content */}
-            <main className="relative z-20 w-full lg:w-5/12 max-w-xl text-black px-4 lg:px-0">
-                <h1 className="text-3xl font-serif uppercase mb-6 text-left">
-                {t('title')}
-                </h1>
-
-                <div className="space-y-6 text-sm leading-relaxed text-left">
-                <section>
-                    <p>{t('paragraph1')}</p>
-                </section>
-
-                <section className="pt-4 border-t">
-                    <p>
-                    {t('paragraph2')}
-                    <br />
-                    <strong>{t('comingSoon')}</strong>
-                    </p>
-                </section>
-
-                <div className="pt-6">
-                    <Link
-                    href="contact"
-                    className="inline-block border border-black px-6 py-2 text-sm uppercase tracking-widest hover:bg-black hover:text-white transition rounded-full"
-                    >
-                    {t('contact')}
-                    </Link>
-                </div>
-                </div>
-            </main>
+    <section className="relative bg-white h-screen overflow-hidden py-20 px-10 sm:px-12 lg:px-20 ">
+        <div className="max-w-7xl mx-auto px-4 h-full flex flex-col md:flex-row items-center justify-center gap-11">
 
             {/* Overlapping Images on Right */}
             <div className="relative w-full lg:w-5/12 h-[500px] lg:h-[600px] mt-12 lg:mt-0">
-                {/* Back Image */}
+            {/* Back Image */}
                 <motion.div
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1.5 }}
                 viewport={{ once: true }}
-                className="absolute top-10 left-1 w-full h-[70%] max-w-[400px] z-0 rounded-xl overflow-hidden shadow-lg"
+                className="absolute top-10 left-1 aspect-square max-w-[350px] border-[10px] border-white z-0 overflow-hidden shadow-[4px_4px_12px_rgba(0,0,0,0.5),_-4px_-4px_8px_rgba(255,255,255,0.3)] rotate-[-10deg]"
                 >
                 <Image
                     src="/images/event1.png"
                     alt="Event Background"
-                    fill
+                    width={400}
+                    height={400}
                     className="object-cover"
                 />
                 <div className="absolute inset-0 bg-black/20 z-10" />
-                </motion.div>
+            </motion.div>
 
-                {/* Front Image */}
-                <motion.div
+
+            {/* Front Image */}
+            <motion.div
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1.5, delay: 0.3 }}
                 viewport={{ once: true }}
-                className="absolute top-70 left-60 w-full h-[40%] max-w-[400px] z-10 rounded-xl overflow-hidden shadow-xl"
+                className="absolute top-52 left-60 aspect-square max-w-[350px] border-[10px] border-white z-10 overflow-hidden shadow-[4px_4px_12px_rgba(0,0,0,0.5),_-4px_-4px_8px_rgba(0,0,0,0.3)] rotate-[5deg]"
                 >
                 <Image
                     src="/images/event2.png"
                     alt="Event Foreground"
-                    fill
+                    width={400}
+                    height={400}
                     className="object-cover"
                 />
                 <div className="absolute inset-0 bg-black/30 z-10" />
-                </motion.div>
-            </div>
-        </div>
+            </motion.div>
 
-         {/* Decorative Borders */}
-              <div className="pointer-events-none absolute inset-[5rem] z-10">
-                {/* Border lines */}
-                <div
-                className="absolute top-0 left-1/2 w-[90.5%] border-t-2 border-black transition-all duration-500 -translate-x-1/2"
-                />
-                <div
-                className="absolute bottom-0 left-1/2 w-[90.5%] border-b-2 border-black transition-all duration-500 -translate-x-1/2"
-                />
-                <div className="absolute top-1/2 right-0 h-[74%] border-r-2 border-black -translate-y-1/2" />
-                <div className="absolute top-1/2 left-0 h-[74%] border-l-2 border-black -translate-y-1/2" />
-                
-        
-                
-        
-                {/* Corner curves */}
-                <div className="absolute top-0 left-0 w-20 h-20 border-b-2 border-r-2 border-black rounded-br-full z-10" />
-                <div className="absolute bottom-0 left-0 w-20 h-20 border-t-2 border-r-2 border-black rounded-tr-full z-10" />
-                <div className="absolute bottom-0 right-0 w-20 h-20 border-t-2 border-l-2 border-black rounded-tl-full z-10" />
-                <div className="absolute top-0 right-0 w-20 h-20 border-b-2 border-l-2 border-black rounded-bl-full z-10" />
-                
-              </div>
-        
+            </div>
+
+            {/* Text Content */}
+            <main className="relative z-20 w-full lg:w-5/12 max-w-xl text-black px-4 lg:px-0 text-right">
+                <h2 className={`text-5xl font-serif mb-6 uppercase text-[#c0462d] font-black ${cinzelDecorative.className}`}>
+                    <span className="border-b-[3px] border-[#c0462d] pb-4 inline-block w-fit">
+                    {t('title')}
+                    </span>
+                </h2>
+
+                <div className={`space-y-6 text-sm leading-tight ${poppins.className}`}>
+                    <section>
+                    <p className='text-[1.12rem] leading-tight whitespace-pre-line mb-6'>{t('paragraph1')}</p>
+                    </section>
+
+                    <section className="pt-4 border-t">
+                    <p className='text-[1.12rem] leading-tight whitespace-pre-line mb-6'>
+                        {t('paragraph2')}
+                        <br />
+                        <strong>{t('comingSoon')}</strong>
+                    </p>
+                    </section>
+
+                    <div className="pt-6">
+                    <Link
+                        href="contact"
+                        className={`py-2 px-2 text-xl border-t-2 border-b-2 border-[#c0462d] text-[#c0462d] uppercase tracking-widest hover:bg-[#c0462d] font-black hover:text-white transition ${cinzel.className}`}
+                    >
+                        {t('contact')}
+                    </Link>
+                    </div>
+                </div>
+            </main>
+        </div>
     </section>
+
   );
 }
