@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { useTranslations } from 'next-intl';
+import Link from 'next/link';
 
 export default function Events() {
   const t = useTranslations('Events');
@@ -30,12 +31,12 @@ export default function Events() {
                 </section>
 
                 <div className="pt-6">
-                    <a
-                    href="mailto:mail@bigspuntino.de"
+                    <Link
+                    href="contact"
                     className="inline-block border border-black px-6 py-2 text-sm uppercase tracking-widest hover:bg-black hover:text-white transition rounded-full"
                     >
                     {t('contact')}
-                    </a>
+                    </Link>
                 </div>
                 </div>
             </main>
@@ -98,9 +99,6 @@ export default function Events() {
                 <div className="absolute bottom-0 left-0 w-20 h-20 border-t-2 border-r-2 border-black rounded-tr-full z-10" />
                 <div className="absolute bottom-0 right-0 w-20 h-20 border-t-2 border-l-2 border-black rounded-tl-full z-10" />
                 <div className="absolute top-0 right-0 w-20 h-20 border-b-2 border-l-2 border-black rounded-bl-full z-10" />
-        
-    
-        
                 
               </div>
         

@@ -1,4 +1,5 @@
 
+import Contact from '../contact/page';
 import Banner from './banner';
 import Events from './events';
 import Gallery from './gallery';
@@ -15,6 +16,7 @@ export default function HomePage() {
       <Events></Events>
       <Story></Story>
       <Gallery></Gallery>
+      <Contact></Contact>
     </div>
   );
 }
