@@ -8,12 +8,11 @@
     "about": "Go to the about home"
   },
   "Banner": {
-    "menu": "Menü",
     "nav": {
       "home": "Startseite",
       "menu": "Speisekarte",
-      "reservation": "Reservierung",
       "events": "Veranstaltungen",
+      "reservation": "Reservierung",
       "contact": "Kontakt",
       "stories": "Unsere Geschichten"
     },
@@ -24,6 +23,7 @@
       "pinterest": "Pinterest"
     },
     "language": "DEU",
+    "opening": "ÖFFNUNGSZEITEN: Mi–Fr: 11:00 – 23:00 | Sa: 10:00 – 23:00 | So: 10:00 – 17:00",
     "hero": {
       "title": "Wir haben einen Tisch für Sie",
       "subtitle": "Die kleine, feine Tagesbar im Herzen des lebendigen Winterhude für die ‚großen Momente"

@@ -8,12 +8,11 @@
     "about": "Go to the home page"
   },
    "Banner": {
-    "menu": "Menu",
     "nav": {
       "home": "Home",
       "menu": "Menu",
-      "reservation": "Reservation",
       "events": "Events",
+      "reservation": "Reservation",
       "contact": "Contact",
       "stories": "Our Stories"
     },
@@ -24,6 +23,7 @@
       "pinterest": "Pinterest"
     },
     "language": "ENG",
+    "opening": "OPENING HOURS: Wed–Fri: 11:00 – 23:00 | Sat: 10:00 – 23:00 | Sun: 10:00 – 17:00",
     "hero": {
       "title": "We have a table for you",
       "subtitle": "The small, fine day bar in the middle of lively Winterhude for the ‘big times’"
