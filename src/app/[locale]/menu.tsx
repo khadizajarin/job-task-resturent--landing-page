@@ -36,11 +36,11 @@ export default function Menu() {
   ];
 
   return (
-   <section className={`h-screen bg-white text-black font-medium ${poppins.className}`}>
+   <section className={`h-screen bg-white text-black ${poppins.className}`}>
       <div className="max-w-7xl mx-auto px-4 h-full flex flex-col md:flex-row items-center justify-center gap-11">
         {/* Left text */}
         <div className="md:w-1/2 w-full text-left">
-          <h2 className={`text-5xl font-serif mb-6 uppercase text-[#c0462d] font-black ${cinzelDecorative.className}`}>
+          <h2 className={`text-5xl mb-6 uppercase text-[#c0462d] font-black ${cinzelDecorative.className}`}>
             <span className="border-b-[3px] border-[#c0462d] pb-4 inline-block w-fit">
               {t('title')}
             </span>
@@ -84,14 +84,14 @@ export default function Menu() {
               data-aos="fade-up"
               data-aos-delay={index * 150}
             >
-              <div className="relative w-full h-48 overflow-hidden ">
+              <div className="relative w-full h-64 overflow-hidden ">
                 <img
                   src={block.image}
                   alt={t(`blocks.${block.key}`)}
                   className="w-full h-full object-cover"
                 />
                 <div
-                  className={`absolute bottom-2 left-0 w-full bg-[#c0462d]/70 text-white text-xl tracking-wider uppercase px-2 py-2 font-black shadow-lg ${cinzel.className}`}
+                  className={`absolute bottom-3 left-0 w-full bg-[#c0462d]/70 text-white text-xl tracking-wider uppercase px-2 py-2 font-black shadow-lg ${cinzel.className}`}
                 >
                   {t(`blocks.${block.key}`)}
                 </div>

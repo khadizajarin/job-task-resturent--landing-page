@@ -56,32 +56,35 @@
     "subtitle": "Visuelle Eindrücke von Big Spuntino"
   },
    "Story": {
-    "title": "La Storia (Geschichte)",
+    "title": "Unsere Geschichten",
     "content": "Seit Sommer 2025 ist das Big Spuntino das zweite italienische Herzstück des Gastgebers Dario Pittarello. Bereits 2015 eröffnete Dario das „Ristorante Pittarello“ am Mühlenkamp in Hamburg-Winterhude und bewirtet seither seine Gäste mit feiner, authentischer italienischen Küche. Doch damit sollte es nicht genug sein – die Chance auf den Nachbarladen konnte sich Dario nicht entgehen lassen und begrüßt zusätzlich nun seither alte wie neue Gäste in einer herzlich-lebhaften Tagesbar mit spettacoloso Snacks und Drinks aus der italienischen Küche.\n\nDas knallig rote Interieur kombiniert mit klassischen Holz- & Messing-Elementen, die harmonisch miteinander verschmelzen, bietet den Gästen die ideale Anlaufstelle für die „big times“ und das alldry long: von boozy Brunches an den Wochenenden, über daily Lunches bis hin zur earlier Aperitivo/Dinner-Hour.\n\nHier kann die mediterrane Lebensfreude am guten Genuss und guten Getränken sowie dem Feiern des Zusammenseins perfekt gelebt werden. Auf die „big times“ mit den kleinen Snacks!"
+  },
+    "Job": {
+    "title": "Lavori",
+    "quote": "Andiamo – Ihr wollt Teil der Famiglia werden und in der fröhlichsten Tagesbar Hamburgs arbeiten?",
+    "description": "Dann nehmt Kontakt mit unserem Team auf – wir freuen uns auf eure Bewerbungen!",
+    "applyNow": "Jetzt Bewerben"
   },
    "Contact": {
     "title": "Kontakt & Öffnungszeiten",
     "description": "Das Big Spuntino ist eine klassische Tagesbar, in denen die Spuntini ganztags verköstigt werden können.",
     "openingHours": "Öffnungszeiten:"
   },
-   "Job": {
-    "title": "Lavori",
-    "quote": "Andiamo – Ihr wollt Teil der Famiglia werden und in der fröhlichsten Tagesbar Hamburgs arbeiten?",
-    "description": "Dann nehmt Kontakt mit unserem Team auf – wir freuen uns auf eure Bewerbungen!",
-    "applyNow": "Jetzt Bewerben"
-  },
   "Reservation": {
   "title": "Reservierung",
   "description": "Reservieren Sie Ihren Tisch im Big Spuntino und genießen Sie ein unvergessliches Erlebnis.",
-  "form": {
-    "name": "Name",
-    "email": "E-Mail",
-    "date": "Datum",
-    "time": "Uhrzeit",
-    "message": "Nachricht",
-    "messagePlaceholder": "Besondere Wünsche oder Hinweise...",
-    "submit": "Jetzt reservieren"
-  }
+  "guests": "Gäste",
+  "time": "Zeit",
+  "date": "Datum",
+  "occasion": "Anlass (optional)",
+  "email": "E-Mail",
+  "mobile": "Telefonnummer",
+  "confirm": "Bestätigen",
+  "alert_me": "Benachrichtige mich",
+  "headline": "WIR FREUEN UNS, SIE BEI UNS BEGRÜSSEN ZU DÜRFEN",
+  "info_1": "Reservieren Sie für bis zu 8 Personen bis zu 30 Tage im Voraus; für größere Gruppen (9 bis 30 Personen) bis zu 60 Tage im Voraus, mit festem Menü.",
+  "info_2": "Für Reservierungen ab 30 Personen und besondere Anlässe kontaktieren Sie uns bitte unter",
+  "info_3": "*Bitte beachten Sie: Wir akzeptieren keine normalen Reservierungen per E-Mail. Weitere Informationen finden Sie unter"
 }
 
 }

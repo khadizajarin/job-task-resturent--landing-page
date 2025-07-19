@@ -25,11 +25,11 @@ export default function Events() {
   const t = useTranslations('Events');
 
   return (
-    <section className="relative bg-white h-screen overflow-hidden py-20 px-10 sm:px-12 lg:px-20 ">
+    <section className=" bg-white h-screen overflow-hidden ">
         <div className="max-w-7xl mx-auto px-4 h-full flex flex-col md:flex-row items-center justify-center gap-11">
 
             {/* Overlapping Images on Right */}
-            <div className="relative w-full lg:w-5/12 h-[500px] lg:h-[600px] mt-12 lg:mt-0">
+            <div className="relative w-full  h-[500px] lg:h-[600px] mt-12 lg:mt-0">
             {/* Back Image */}
                 <motion.div
                 initial={{ opacity: 0, x: 100 }}
@@ -70,7 +70,7 @@ export default function Events() {
             </div>
 
             {/* Text Content */}
-            <main className="relative z-20 w-full lg:w-5/12 max-w-xl text-black px-4 lg:px-0 text-right">
+            <main className="relative z-20 w-full  max-w-xl text-black text-right">
                 <h2 className={`text-5xl font-serif mb-6 uppercase text-[#c0462d] font-black ${cinzelDecorative.className}`}>
                     <span className="border-b-[3px] border-[#c0462d] pb-4 inline-block w-fit">
                     {t('title')}
@@ -79,11 +79,11 @@ export default function Events() {
 
                 <div className={`space-y-6 text-sm leading-tight ${poppins.className}`}>
                     <section>
-                    <p className='text-[1.12rem] leading-tight whitespace-pre-line mb-6'>{t('paragraph1')}</p>
+                    <p className='text-[1.12rem] leading-tight mb-6'>{t('paragraph1')}</p>
                     </section>
 
                     <section className="pt-4 border-t">
-                    <p className='text-[1.12rem] leading-tight whitespace-pre-line mb-6'>
+                    <p className='text-[1.12rem] leading-tight mb-6'>
                         {t('paragraph2')}
                         <br />
                         <strong>{t('comingSoon')}</strong>

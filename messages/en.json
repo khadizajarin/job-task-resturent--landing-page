@@ -52,35 +52,39 @@
     "contact": "Contact"
   },
   "Story": {
-    "title": "La Storia (History)",
+    "title": "Our Stories",
     "content": "Since the summer of 2025, the Big Spuntino has been the second Italian centerpiece of host Dario Pittarello. Dario opened the “Ristorante Pittarello” at Mühlenkamp in Hamburg-Winterhude back in 2015 and has been serving his guests with fine, authentic Italian cuisine ever since. But that wasn’t enough – Dario couldn’t miss the chance to visit the neighboring shop and has been welcoming old and new guests in a warm and lively day bar with spettacoloso snacks and drinks from Italian cuisine.\n\nThe bright red interior combined with classic wood and brass elements that blend harmoniously with each other offers guests the ideal place to go for the “big times” and the alldry long: from boozy brunches on the weekends, to daily lunches to early aperitivo/dinner hour.\n\nHere, the Mediterranean joie de vivre of good enjoyment and good drinks as well as the celebration of being together can be perfectly lived. Here’s to the “big times” with the small snacks!"
   },
   "gallery": {
     "title": "Gallery",
     "subtitle": "Visual flavors of Big Spuntino"
   },  
-  "Contact": {
-    "title": "Contact & Opening Hours",
-    "description": "The Big Spuntino is a classic day bar where the Spuntini can be tasted all day long.",
-    "openingHours": "Opening Hours:"
-  },
   "Job": {
     "title": "Jobs",
     "quote": "Andiamo – You want to become part of the Famiglia and work in the happiest day bar in Hamburg?",
     "description": "Then get in touch with our team – we look forward to receiving your applications!",
     "applyNow": "Apply Now"
   },
+  "Contact": {
+    "title": "Contact & Opening Hours",
+    "description": "The Big Spuntino is a classic day bar where the Spuntini can be tasted all day long.",
+    "openingHours": "Opening Hours:"
+  },
   "Reservation": {
   "title": "Reservation",
   "description": "Reserve your table at Big Spuntino and enjoy a delightful experience.",
-  "form": {
-    "name": "Name",
-    "email": "Email",
-    "date": "Date",
-    "time": "Time",
-    "message": "Message",
-    "messagePlaceholder": "Special requests or notes...",
-    "submit": "Book Now"
-  }
+  "guests": "Guests",
+  "time": "Time",
+  "date": "Date",
+  "occasion": "Occasion (Optional)",
+  "email": "Email",
+  "mobile": "Mobile No",
+  "confirm": "Confirm",
+  "alert_me": "Alert Me",
+  "headline": "WE ARE THRILLED TO HAVE YOU JOIN US",
+  "info_1": "Secure your spot for up to 8 people 30 days ahead of a date; for larger groups (from 9 up to 30), 60 days ahead of a date, with a set menu.",
+  "info_2": "For reservations of 30 people or more and special occasions, please contact us at",
+  "info_3": "*Please note: we don’t accept normal reservations via email. For more information, please visit"
 }
+
 }

@@ -6,23 +6,22 @@ import Gallery from './gallery';
 import Job from './job';
 import Menu from './menu';
 import Story from './story';
-import ReservationPage from './reservation';
-// import Navbar from './navbar';
+import Reservation from './reservation';
+
 
 
 export default function HomePage() {
 
   return (
     <div>
-      {/* <Navbar></Navbar> */}
       <Banner></Banner>
       <Menu></Menu>
       <Events></Events>
       <Story></Story>
       <Gallery></Gallery>
-      <Contact></Contact>
       <Job></Job>
-      <ReservationPage></ReservationPage>
+      <Reservation></Reservation>
+      <Contact></Contact>
     </div>
   );
 }

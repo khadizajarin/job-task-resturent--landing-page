@@ -36,11 +36,11 @@ export default function GalleryMosaic() {
   const t = useTranslations('gallery');
 
   return (
-    <section className="bg-white h-screen overflow-hidden py-20 px-10 sm:px-12 lg:px-20 ">
-      <div className="max-w-7xl mx-auto px-4 h-full flex flex-col md:flex-row items-center justify-center gap-11">
+    <section className="bg-white overflow-hidden py-20 px-10 sm:px-12 lg:px-20 ">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-11">
         
         {/* Mosaic Layout - Left Side */}
-        <div className="grid grid-cols-4 auto-rows-[13rem] gap-4 flex-1 w-full h-full lg:w-7/12 ">
+        <div className="grid grid-cols-4 auto-rows-[18rem] gap-4 flex-1 w-full lg:w-9/12 ">
           {images.map((img, i) => {
             const spanClass = (() => {
               switch (i) {
