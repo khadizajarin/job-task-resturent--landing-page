@@ -1,12 +1,4 @@
 {
-  "HomePage": {
-    "title": "Hello world!ggggggggggg",
-    "about": "Go to the about pagejkdwfdef"
-  },
-  "about":{
-    "title":"Hello world! this is abouttttttttttttttttt",
-    "about": "Go to the about home"
-  },
   "Banner": {
     "nav": {
       "home": "Startseite",
@@ -28,6 +20,11 @@
       "title": "Wir haben einen Tisch für Sie",
       "subtitle": "Die kleine, feine Tagesbar im Herzen des lebendigen Winterhude für die ‚großen Momente"
     }
+  },
+  "ReservePopup": {
+    "message": "Willkommen! Reservieren Sie jetzt Ihren Tisch, um ein großartiges Erlebnis zu genießen.",
+    "reserveButton": "Tisch reservieren",
+    "close": "Popup schließen"
   },
   "Menu": {
       "title": "A Tavola",

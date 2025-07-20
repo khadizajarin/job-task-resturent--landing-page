@@ -1,107 +1,66 @@
+// components/ReservePopup.tsx
 'use client';
 
-import { X } from 'lucide-react';
-import { useFormik } from 'formik';
 import { useEffect, useState } from 'react';
+import { useTranslations } from 'next-intl';
+import { Cinzel, Cinzel_Decorative, Poppins } from 'next/font/google';
+import Link from 'next/link';
 
-interface Props {
-  isOpen: boolean;
-  onClose: () => void;
-}
-
-export default function ReservationModal({ isOpen, onClose }: Props) {
-  const [show, setShow] = useState(false);
-
-  useEffect(() => {
-    if (isOpen) {
-      setShow(true);
-    } else {
-      // Delay unmounting to let animation finish
-      setTimeout(() => setShow(false), 300);
-    }
-  }, [isOpen]);
-
-  const formik = useFormik({
-    initialValues: {
-      name: '',
-      email: '',
-      date: '',
-      time: '',
-    },
-    onSubmit: (values) => {
-      console.log('Reservation Data:', values);
-      onClose();
-    },
+ const poppins = Poppins({
+    weight: ['600'],
+    subsets: ['latin'],
+    display: 'swap',
+  });
+  
+  const cinzel = Cinzel({ subsets: ['latin'], weight: ['400', '700'] });
+  const cinzelDecorative = Cinzel_Decorative({
+    subsets: ['latin'],
+    weight: ['400', '700', '900'],
   });
 
-  if (!isOpen && !show) return null;
+export default function ReservePopup() {
+  const [show, setShow] = useState(false);
+  const t = useTranslations('ReservePopup');
+
+  const scrollToSectionById = (id: string) => {
+    const section = document.getElementById(id);
+    section?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+
+  useEffect(() => {
+    setShow(true);
+  }, []);
+
+  if (!show) return null;
 
   return (
     <div
-      className={`
-        fixed bottom-6 right-6 z-[100] w-full max-w-md
-        transform transition-transform duration-800
-        ${isOpen ? 'translate-y-0 opacity-100' : 'translate-y-full opacity-0'}
-      `}
+      className="absolute inset-0 bg-opacity-50 flex justify-end items-end p-10 z-50"
+      onClick={() => setShow(false)}
+      aria-modal="true"
+      role="dialog"
+      tabIndex={-1}
     >
-      <div className="relative bg-white text-black rounded-xl shadow-2xl p-6">
-        {/* Close Button */}
+      <div
+        className="bg-white  p-6 max-w-md  w-full relative"
+        onClick={e => e.stopPropagation()}
+      >
+        <p className={`mb-8 text-center text-black  font-black ${cinzelDecorative.className}`}>{t('message')}</p>
         <button
-          onClick={onClose}
-          className="absolute top-4 right-4 text-black hover:text-gray-600"
+          onClick={() => scrollToSectionById("reservation")}
+          className={`block w-full text-center py-2 px-2 text-xl border-t-2 border-b-2 border-[#c0462d] text-[#c0462d] uppercase tracking-widest hover:bg-[#c0462d] font-black hover:text-white transition ${cinzel.className}`}
         >
-          <X className="w-6 h-6" />
+          {t('reserveButton')}
         </button>
 
-        {/* Heading */}
-        <h2 className="text-2xl font-bold mb-6 text-center uppercase tracking-widest">
-          Reserve a Table
-        </h2>
-
-        {/* Form */}
-        <form onSubmit={formik.handleSubmit} className="space-y-4">
-          <input
-            type="text"
-            name="name"
-            placeholder="Full Name"
-            onChange={formik.handleChange}
-            value={formik.values.name}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black text-sm"
-          />
-
-          <input
-            type="email"
-            name="email"
-            placeholder="Email"
-            onChange={formik.handleChange}
-            value={formik.values.email}
-            className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black text-sm"
-          />
-
-          <div className="flex gap-4">
-            <input
-              type="date"
-              name="date"
-              onChange={formik.handleChange}
-              value={formik.values.date}
-              className="w-1/2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black text-sm"
-            />
-            <input
-              type="time"
-              name="time"
-              onChange={formik.handleChange}
-              value={formik.values.time}
-              className="w-1/2 px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-black text-sm"
-            />
-          </div>
-
-          <button
-            type="submit"
-            className="w-full bg-black text-white py-2 rounded-md hover:bg-gray-800 transition font-semibold tracking-wide uppercase"
-          >
-            Submit
-          </button>
-        </form>
+        <button
+          aria-label={t('close')}
+          onClick={() => setShow(false)}
+          className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
+        >
+          &times;
+        </button>
       </div>
     </div>
   );

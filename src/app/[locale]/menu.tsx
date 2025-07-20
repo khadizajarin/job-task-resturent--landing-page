@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl';
 import { Cinzel_Decorative } from 'next/font/google';
 import { Cinzel } from 'next/font/google';
 import { Poppins } from 'next/font/google';
+import Image from 'next/image';
 
 const cinzel = Cinzel({ subsets: ['latin'], weight: ['400', '700'] });
 
@@ -36,8 +37,64 @@ export default function Menu() {
   ];
 
   return (
-   <section className={`h-screen bg-white text-black ${poppins.className}`}>
+   <section id="menu" className={`relative lg:h-screen h-full pt-12 lg:pt-0 w-full bg-white text-black ${poppins.className}`}>
       <div className="max-w-7xl mx-auto px-4 h-full flex flex-col md:flex-row items-center justify-center gap-11">
+
+                  <div className="absolute hidden lg:block inset-0 pointer-events-none z-0">
+                    <Image
+                        src="/images/menu-doodle1.png"
+                        alt="Doodle 1"
+                        width={100}
+                        height={100}
+                        className="absolute top-4 left-40 opacity-50"
+                    />
+                    <Image
+                        src="/images/menu-doodle2.png"
+                        alt="Doodle 2"
+                        width={100}
+                        height={100}
+                        className="absolute top-40 right-56 opacity-50 rotate-12"
+                    />
+                    <Image
+                        src="/images/menu-doodle3.png"
+                        alt="Doodle 3"
+                        width={100}
+                        height={100}
+                        className="absolute bottom-68 right-[5%] opacity-50 -rotate-6"
+                    />
+                    <Image
+                        src="/images/menu-doodle4.png"
+                        alt="Doodle 4"
+                        width={100}
+                        height={100}
+                        className="absolute top-[20%] left-[45%] opacity-40 rotate-[15deg]"
+                    />
+                    <Image
+                        src="/images/menu-doodle5.png"
+                        alt="Doodle 5"
+                        width={100}
+                        height={100}
+                        className="absolute bottom-[30%] right-[10%] opacity-40 -rotate-[10deg]"
+                    />
+                    <Image
+                        src="/images/event-doodle6.png"
+                        alt="Doodle 6"
+                        width={100}
+                        height={100}
+                        className="absolute top-[75%] left-[45%] opacity-50 rotate-[25deg]"
+                    />
+                    <Image
+                        src="/images/event-doodle7.png"
+                        alt="Doodle 7"
+                        width={100}
+                        height={100}
+                        className="absolute bottom-16 right-[30%] opacity-30 rotate-[5deg]"
+                    />
+                  </div>
+
+
+
+
         {/* Left text */}
         <div className="md:w-1/2 w-full text-left">
           <h2 className={`text-5xl mb-6 uppercase text-[#c0462d] font-black ${cinzelDecorative.className}`}>
@@ -76,7 +133,7 @@ export default function Menu() {
         </div>
 
         {/* Right grid */}
-        <div className="md:w-1/2 w-full grid grid-cols-2 gap-10">
+        <div className="md:w-1/2 lg:mt-0 mt-12 w-full grid grid-cols-2 gap-10">
           {blocks.map((block, index) => (
             <div
               key={block.key}

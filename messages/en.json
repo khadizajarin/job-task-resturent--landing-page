@@ -1,12 +1,5 @@
 {
-  "HomePage": {
-    "title": "Hello world!",
-    "about": "Go to the about page"
-  },
-  "about":{
-    "title":"Hello world! this is about",
-    "about": "Go to the home page"
-  },
+
    "Banner": {
     "nav": {
       "home": "Home",
@@ -28,6 +21,11 @@
       "title": "We have a table for you",
       "subtitle": "The small, fine day bar in the middle of lively Winterhude for the ‘big times’"
     }
+  },
+    "ReservePopup": {
+    "message": "Welcome! Reserve your table now to enjoy a great experience.",
+    "reserveButton": "Reserve a Table",
+    "close": "Close popup"
   },
     "Menu": {
     "title": "A Tavola",

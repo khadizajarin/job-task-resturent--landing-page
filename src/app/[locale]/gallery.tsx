@@ -36,11 +36,65 @@ export default function GalleryMosaic() {
   const t = useTranslations('gallery');
 
   return (
-    <section className="bg-white overflow-hidden py-20 px-10 sm:px-12 lg:px-20 ">
+    <section className="relative bg-white overflow-hidden lg:py-20 py-10 px-10 sm:px-12 lg:px-20 ">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-center gap-11">
+
+         {/* Scattered Doodle Background */}
+                  <div className="absolute hidden lg:block inset-0 pointer-events-none z-0">
+                    <Image
+                        src="/images/event-doodle1.png"
+                        alt="Doodle 1"
+                        width={100}
+                        height={100}
+                        className="absolute top-8 left-10 opacity-40"
+                    />
+                    <Image
+                        src="/images/event-doodle2.png"
+                        alt="Doodle 2"
+                        width={100}
+                        height={100}
+                        className="absolute top-40 right-16 opacity-40 rotate-12"
+                    />
+                    <Image
+                        src="/images/event-doodle3.png"
+                        alt="Doodle 3"
+                        width={100}
+                        height={100}
+                        className="absolute bottom-8 left-[5%] opacity-50 -rotate-6"
+                    />
+                    <Image
+                        src="/images/event-doodle4.png"
+                        alt="Doodle 4"
+                        width={100}
+                        height={100}
+                        className="absolute top-[30%] left-[55%] opacity-40 rotate-[15deg]"
+                    />
+                    <Image
+                        src="/images/event-doodle5.png"
+                        alt="Doodle 5"
+                        width={100}
+                        height={100}
+                        className="absolute bottom-[30%] right-[10%] opacity-40 -rotate-[10deg]"
+                    />
+                    <Image
+                        src="/images/event-doodle6.png"
+                        alt="Doodle 6"
+                        width={100}
+                        height={100}
+                        className="absolute top-[45%] left-[10%] opacity-50 rotate-[25deg]"
+                    />
+                    <Image
+                        src="/images/event-doodle7.png"
+                        alt="Doodle 7"
+                        width={100}
+                        height={100}
+                        className="absolute bottom-16 right-[30%] opacity-30 rotate-[5deg]"
+                    />
+                  </div>
+        
         
         {/* Mosaic Layout - Left Side */}
-        <div className="grid grid-cols-4 auto-rows-[18rem] gap-4 flex-1 w-full lg:w-9/12 ">
+        <div className="grid grid-cols-4 auto-rows-[13rem] gap-2 lg:gap-4 flex-1 w-full lg:w-9/12 ">
           {images.map((img, i) => {
             const spanClass = (() => {
               switch (i) {
