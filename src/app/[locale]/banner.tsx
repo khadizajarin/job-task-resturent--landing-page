@@ -217,7 +217,7 @@ const navItems = [
         
       </div>
 
-        <ReservationModal isOpen={showModal} onClose={() => setShowModal(false)} />
+        {/* <ReservationModal isOpen={showModal} onClose={() => setShowModal(false)} /> */}
       </div>
     </div>
     

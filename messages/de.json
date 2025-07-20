@@ -65,11 +65,6 @@
     "description": "Dann nehmt Kontakt mit unserem Team auf – wir freuen uns auf eure Bewerbungen!",
     "applyNow": "Jetzt Bewerben"
   },
-   "Contact": {
-    "title": "Kontakt & Öffnungszeiten",
-    "description": "Das Big Spuntino ist eine klassische Tagesbar, in denen die Spuntini ganztags verköstigt werden können.",
-    "openingHours": "Öffnungszeiten:"
-  },
   "Reservation": {
   "title": "Reservierung",
   "description": "Reservieren Sie Ihren Tisch im Big Spuntino und genießen Sie ein unvergessliches Erlebnis.",
@@ -85,6 +80,18 @@
   "info_1": "Reservieren Sie für bis zu 8 Personen bis zu 30 Tage im Voraus; für größere Gruppen (9 bis 30 Personen) bis zu 60 Tage im Voraus, mit festem Menü.",
   "info_2": "Für Reservierungen ab 30 Personen und besondere Anlässe kontaktieren Sie uns bitte unter",
   "info_3": "*Bitte beachten Sie: Wir akzeptieren keine normalen Reservierungen per E-Mail. Weitere Informationen finden Sie unter"
-}
-
+  },
+  "Contact": {
+    "description": "Das Big Spuntino ist eine klassische Tagesbar, in der die Spuntini den ganzen Tag über genossen werden können.",
+    "hoursTitle": "Öffnungszeiten",
+    "hours": {
+      "wed_fri": "MI–FR: 11 – 23 Uhr",
+      "sat": "SA: 10 – 23 Uhr",
+      "sun": "SO: 10 – 17 Uhr"
+    },
+    "contactTitle": "Kontakt",
+    "followUs": "Folge Uns",
+    "copyright": "Copyright ©2025 Alle Rechte vorbehalten",
+    "developed_by": "Diese Website wurde von Khadiza Jarin Roza entwickelt"
+  }
 }

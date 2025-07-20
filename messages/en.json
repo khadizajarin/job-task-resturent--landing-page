@@ -65,11 +65,6 @@
     "description": "Then get in touch with our team – we look forward to receiving your applications!",
     "applyNow": "Apply Now"
   },
-  "Contact": {
-    "title": "Contact & Opening Hours",
-    "description": "The Big Spuntino is a classic day bar where the Spuntini can be tasted all day long.",
-    "openingHours": "Opening Hours:"
-  },
   "Reservation": {
   "title": "Reservation",
   "description": "Reserve your table at Big Spuntino and enjoy a delightful experience.",
@@ -85,6 +80,19 @@
   "info_1": "Secure your spot for up to 8 people 30 days ahead of a date; for larger groups (from 9 up to 30), 60 days ahead of a date, with a set menu.",
   "info_2": "For reservations of 30 people or more and special occasions, please contact us at",
   "info_3": "*Please note: we don’t accept normal reservations via email. For more information, please visit"
-}
+  },
+  "Contact": {
+    "description": "The Big Spuntino is a classic day bar where the Spuntini can be tasted all day long.",
+    "hoursTitle": "Opening Hours",
+    "hours": {
+      "wed_fri": "WED–FRI: 11 AM – 11 PM",
+      "sat": "SAT: 10 AM – 11 PM",
+      "sun": "SUN: 10 AM – 5 PM"
+    },
+    "contactTitle": "Contact",
+    "followUs": "Follow Us",
+    "copyright": "Copyright ©2025 All Right Reserved",
+    "developed_by": "This Website Is Developed By Khadiza Jarin Roza"
+  }
 
 }

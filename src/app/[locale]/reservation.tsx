@@ -54,8 +54,8 @@ const Reservation = () => {
 
   return (
     <div className={`bg-white h-screen flex items-center justify-center ${poppins.className}`}>
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-11">
-        <div className="w-full lg:w-2/3 text-white ">
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-11 items-center justify-center">
+        <div className="w-full lg:w-3/5 text-white ">
         <img
           src="/images/reservation.png"
           alt="Restaurant Interior"
@@ -63,20 +63,23 @@ const Reservation = () => {
         />
 
         <div className="grid grid-cols-3 gap-1 ">
-          <select name="guests" value={formData.guests} onChange={handleChange} className="bg-[#c0462d] p-2">
+          <select name="guests" value={formData.guests} onChange={handleChange} className="bg-[#c0462d] p-2 focus:outline-none focus:ring-0 focus:border-transparent
+">
             {[...Array(8)].map((_, i) => (
               <option key={i + 1} value={i + 1}>{i + 1}</option>
             ))}
           </select>
 
-          <select name="time" value={formData.time} onChange={handleChange} className="bg-[#c0462d] p-2">
+          <select name="time" value={formData.time} onChange={handleChange} className="bg-[#c0462d] p-2 focus:outline-none focus:ring-0 focus:border-transparent
+">
             {["1 hr", "2 hr", "3 hr"].map((t) => (
               <option key={t} value={t}>{t}</option>
             ))}
           </select>
 
-          <select name="date" value={formData.date} onChange={handleChange} className="bg-[#c0462d] p-2">
-            {["23 Jul", "24 Jul", "25 Jul"].map((d) => (
+          <select name="date" value={formData.date} onChange={handleChange} className="bg-[#c0462d] p-2 focus:outline-none focus:ring-0 focus:border-transparent
+">
+            {["23 Jul 2025", "24 Jul 2025", "25 Jul 2025"].map((d) => (
               <option key={d} value={d}>{d}</option>
             ))}
           </select>
@@ -86,7 +89,7 @@ const Reservation = () => {
             placeholder="Occasion (Optional)"
             value={formData.occasion}
             onChange={handleChange}
-            className="col-span-1 p-2 bg-[#c0462d]"
+            className="col-span-1 p-2 bg-[#c0462d] focus:outline-none focus:ring-0 focus:border-transparent"
           />
 
           <input
@@ -94,7 +97,7 @@ const Reservation = () => {
             placeholder="Email"
             value={formData.email}
             onChange={handleChange}
-            className="col-span-1 p-2 bg-[#c0462d]"
+            className="col-span-1 p-2 bg-[#c0462d] focus:outline-none focus:ring-0 focus:border-transparent"
           />
 
           <input
@@ -102,11 +105,11 @@ const Reservation = () => {
             placeholder="Mobile No"
             value={formData.mobile}
             onChange={handleChange}
-            className="col-span-1 p-2 bg-[#c0462d]"
+            className="col-span-1 p-2 bg-[#c0462d] focus:outline-none focus:ring-0 focus:border-transparent"
           />
         </div>
 
-        <div className="bg-black text-white p-6 ">
+        <div className="bg-black text-white p-8 ">
           <h2 className={`text-2xl font-black mb-4 ${cinzelDecorative.className}`}>{t("headline")}</h2>
           <p className="mb-2 text-sm font-medium mt-3">{t("info_1")}</p>
           <p className="mb-2 text-sm font-medium mt-3">
@@ -116,13 +119,13 @@ const Reservation = () => {
             {t("info_3")} <a href="https://www.bigsquadra.com/" target="_blank" className="underline">https://www.bigsquadra.com/</a>
           </p>
 
-            <div className={`mt-3 inline-block py-2 px-4 text-xl border-t-2 border-b-2 border-white text-white uppercase tracking-widest hover:bg-[#c0462d] font-black hover:text-white transition ${cinzel.className}`}>
+            <div className={`mt-8 inline-block py-2 px-4 text-xl border-t-2 border-b-2 border-white text-white uppercase tracking-widest hover:bg-[#c0462d] font-black hover:text-white transition ${cinzel.className}`}>
             {t('confirm')}
           </div>
         </div>
         </div>
 
-        <div className="w-full lg:w-1/3 h-full flex flex-col justify-center items-center text-right">
+        <div className="w-full lg:w-2/5 h-full flex flex-col justify-center items-center text-right ">
           <h2 className={`text-5xl font-serif mb-6 uppercase text-[#c0462d] font-black ${cinzelDecorative.className}`}>
             <span className="border-b-[3px] border-[#c0462d] pb-4 inline-block w-fit">
               {t('title')}
@@ -138,7 +141,7 @@ const Reservation = () => {
               <button
                 key={slot}
                 className={`p-2 h-14 w-20 text-xl text-white text-center justify-self-end flex items-center justify-center transition 
-                  ${formData.selectedTime === slot ? 'bg-[#c0462d]' : 'bg-[#a55a2c]'}`}
+                  ${formData.selectedTime === slot ? 'bg-[#c0462d]' : 'bg-[#c0462d]'}`}
                 onClick={() => handleTimeSelect(slot)}
               >
                 {slot}

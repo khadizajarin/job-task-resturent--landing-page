@@ -22,7 +22,7 @@ export default function Story() {
   const t = useTranslations('Story');
 
   return (
-    <section className="relative h-[38rem] px-6 py-12 md:py-20 lg:px-24 text-white overflow-hidden">
+    <section className={`relative h-[38rem] px-6 py-12 md:py-20 lg:px-24 text-white overflow-hidden ${poppins.className}`}>
       {/* Background image container */}
       <div className="absolute inset-0 -z-10">
         <Image

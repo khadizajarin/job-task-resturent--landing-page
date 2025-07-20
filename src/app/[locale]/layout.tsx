@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 type Props = {
   children: ReactNode;
-  params: Promise<{ locale: string }>; // <-- params must be a Promise
+  params: Promise<{ locale: string }>; 
 };
 
 export default async function LocaleLayout({ children, params }: Props) {
