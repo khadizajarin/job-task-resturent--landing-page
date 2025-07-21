@@ -49,7 +49,7 @@ export default function ReservePopup() {
         <p className={`mb-8 text-center text-black  font-black ${cinzelDecorative.className}`}>{t('message')}</p>
         <button
           onClick={() => scrollToSectionById("reservation")}
-          className={`block w-full text-center py-2 px-2 text-xl border-t-2 border-b-2 border-[#c0462d] text-[#c0462d] uppercase tracking-widest hover:bg-[#c0462d] font-black hover:text-white transition ${cinzel.className}`}
+          className={`block w-full text-center py-2 px-2 text-xl border-t-2 border-b-2 border-[#964315] text-[#964315] uppercase tracking-widest hover:bg-[#964315] font-black hover:text-white transition ${cinzel.className}`}
         >
           {t('reserveButton')}
         </button>

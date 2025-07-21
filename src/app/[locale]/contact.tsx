@@ -111,7 +111,7 @@ export default function Contact() {
       </div>
     </div>
 
-    <footer className={`bg-[#c0462d] px-8 h-24 text-white flex justify-center items-center text-center py-4 shadow-md ${poppins.className}`}>
+    <footer className={`bg-[#964315] px-8 h-24 text-white flex justify-center items-center text-center py-4 shadow-md ${poppins.className}`}>
       <p className="lg:text-xl text-md font-medium tracking-wide">
          {t('copyright')} &nbsp;|&nbsp; {t('developed_by')}
       </p>

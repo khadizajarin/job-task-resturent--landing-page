@@ -37,7 +37,7 @@ export default function Story() {
 
       {/* Content */}
       <div className="max-w-7xl mx-auto h-full flex flex-col justify-center text-left  z-10">
-        <h2 className={`text-5xl font-serif mb-6 uppercase text-white font-black ${cinzelDecorative.className}`}>
+        <h2 className={`text-5xl mb-6 uppercase text-white font-black ${cinzelDecorative.className}`}>
           <span className="border-b-[3px] border-white pb-4 inline-block w-fit">
             {t('title')}
           </span>

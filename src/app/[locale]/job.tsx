@@ -21,21 +21,21 @@ export default function Job() {
   const t = useTranslations('Job');
 
   return (
-    <section className={`relative bg-[#c0462d] h-[30rem] lg:h-[28rem] text-left px-6 lg:py-20 py-10 ${poppins.className}`}>
+    <section className={`relative bg-[#964315] h-[30rem] lg:h-[28rem] text-left px-6 lg:py-20 py-10 ${poppins.className}`}>
         <div className="absolute hidden lg:block inset-0 pointer-events-none z-0">
           <Image
             src="/images/menu-doodle1.png"
             alt="Doodle 1"
             width={100}
             height={100}
-            className="absolute top-[1.5rem] left-[8.75rem] opacity-55 rotate-[3deg]"
+            className="absolute top-[1.5rem] left-[8.75rem] opacity-100 rotate-[3deg]"
           />
           <Image
             src="/images/menu-doodle2.png"
             alt="Doodle 2"
             width={100}
             height={100}
-            className="absolute top-[18.25rem] right-[10.5rem] opacity-55 rotate-[17deg]"
+            className="absolute top-[18.25rem] right-[10.5rem] opacity-10 rotate-[17deg]"
           />
           <Image
             src="/images/menu-doodle3.png"
@@ -76,7 +76,7 @@ export default function Job() {
 
 
         <div className="max-w-7xl mx-auto space-y-8 z-40">
-          <h2 className={`text-5xl font-serif mb-6 uppercase text-white font-black ${cinzelDecorative.className}`}>
+          <h2 className={`text-5xl mb-6 uppercase text-white font-black ${cinzelDecorative.className}`}>
             <span className="border-b-[3px] border-white pb-4 inline-block w-fit">
               {t('title')}
             </span>
@@ -89,7 +89,7 @@ export default function Job() {
           <p className="text-lg text-white">{t('description')}</p>
 
           
-         <div className={`inline-block py-2 px-4 text-xl border-t-2 border-b-2 border-white text-white uppercase tracking-widest hover:bg-[#c0462d] font-black hover:text-white transition ${cinzel.className}`}>
+         <div className={`inline-block py-2 px-4 text-xl border-t-2 border-b-2 border-white text-white uppercase tracking-widest hover:bg-[#964315] font-black hover:text-white transition ${cinzel.className}`}>
             {t('applyNow')}
           </div>
       </div>

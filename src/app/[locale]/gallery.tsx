@@ -134,8 +134,8 @@ export default function GalleryMosaic() {
 
         {/* Text Content - Right Side */}
         <div className="relative z-20 w-full lg:w-5/12 max-w-xl text-black px-4 lg:px-0 text-right">
-          <h2 className={`text-5xl font-serif mb-6 uppercase text-[#c0462d] font-black ${cinzelDecorative.className}`}>
-            <span className="border-b-[3px] border-[#c0462d] pb-4 inline-block w-fit">
+          <h2 className={`text-5xl mb-6 uppercase text-[#964315] font-black ${cinzelDecorative.className}`}>
+            <span className="border-b-[3px] border-[#964315] pb-4 inline-block w-fit">
               {t('title')}
             </span>
           </h2>

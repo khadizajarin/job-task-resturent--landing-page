@@ -118,21 +118,21 @@ const Reservation = () => {
         />
 
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-1 ">
-          <select name="guests" value={formData.guests} onChange={handleChange} className="bg-[#c0462d] p-2 focus:outline-none focus:ring-0 focus:border-transparent
+          <select name="guests" value={formData.guests} onChange={handleChange} className="bg-[#964315] p-2 focus:outline-none focus:ring-0 focus:border-transparent
 ">
             {[...Array(8)].map((_, i) => (
               <option key={i + 1} value={i + 1}>{i + 1}</option>
             ))}
           </select>
 
-          <select name="time" value={formData.time} onChange={handleChange} className="bg-[#c0462d] p-2 focus:outline-none focus:ring-0 focus:border-transparent
+          <select name="time" value={formData.time} onChange={handleChange} className="bg-[#964315] p-2 focus:outline-none focus:ring-0 focus:border-transparent
 ">
             {["1 hr", "2 hr", "3 hr"].map((t) => (
               <option key={t} value={t}>{t}</option>
             ))}
           </select>
 
-          <select name="date" value={formData.date} onChange={handleChange} className="bg-[#c0462d] p-2 focus:outline-none focus:ring-0 focus:border-transparent
+          <select name="date" value={formData.date} onChange={handleChange} className="bg-[#964315] p-2 focus:outline-none focus:ring-0 focus:border-transparent
 ">
             {["23 Jul 2025", "24 Jul 2025", "25 Jul 2025"].map((d) => (
               <option key={d} value={d}>{d}</option>
@@ -144,7 +144,7 @@ const Reservation = () => {
             placeholder="Occasion (Optional)"
             value={formData.occasion}
             onChange={handleChange}
-            className="col-span-1 p-2 bg-[#c0462d] focus:outline-none focus:ring-0 focus:border-transparent"
+            className="col-span-1 p-2 bg-[#964315] focus:outline-none focus:ring-0 focus:border-transparent"
           />
 
           <input
@@ -152,7 +152,7 @@ const Reservation = () => {
             placeholder="Email"
             value={formData.email}
             onChange={handleChange}
-            className="col-span-1 p-2 bg-[#c0462d] focus:outline-none focus:ring-0 focus:border-transparent"
+            className="col-span-1 p-2 bg-[#964315] focus:outline-none focus:ring-0 focus:border-transparent"
           />
 
           <input
@@ -160,11 +160,11 @@ const Reservation = () => {
             placeholder="Mobile No"
             value={formData.mobile}
             onChange={handleChange}
-            className="col-span-1 p-2 bg-[#c0462d] focus:outline-none focus:ring-0 focus:border-transparent"
+            className="col-span-1 p-2 bg-[#964315] focus:outline-none focus:ring-0 focus:border-transparent"
           />
         </div>
 
-        <div className="bg-black text-white p-8 ">
+        <div className="bg-[#1D1D1B] text-white p-8 ">
           <h2 className={`lg:text-2xl text-xl font-black mb-4 ${cinzelDecorative.className}`}>{t("headline")}</h2>
           <p className="mb-2 text-sm font-medium mt-3">{t("info_1")}</p>
           <p className="mb-2 text-sm font-medium mt-3">
@@ -174,7 +174,7 @@ const Reservation = () => {
             {t("info_3")} <a href="https://www.bigspontino.com/" target="_blank" className="underline">https://www.bigspontino.com/</a>
           </p>
 
-            <div className={`mt-8 inline-block py-2 px-4 text-xl border-t-2 border-b-2 border-white text-white uppercase tracking-widest hover:bg-[#c0462d] font-black hover:text-white transition ${cinzel.className}`}>
+            <div className={`mt-8 inline-block py-2 px-4 text-xl border-t-2 border-b-2 border-white text-white uppercase tracking-widest hover:bg-[#964315] font-black hover:text-white transition ${cinzel.className}`}>
             {t('confirm')}
           </div>
         </div>
@@ -182,9 +182,9 @@ const Reservation = () => {
 
         <div className="w-full lg:w-2/5 h-full flex flex-col justify-center items-center lg:items-end text-center lg:text-right px-4 sm:px-8 py-8">
           <h2
-            className={`text-3xl sm:text-4xl md:text-5xl font-serif mb-4 sm:mb-6 uppercase text-[#c0462d] font-black ${cinzelDecorative.className}`}
+            className={`text-3xl sm:text-4xl md:text-5xl mb-4 sm:mb-6 uppercase text-[#964315] font-black ${cinzelDecorative.className}`}
           >
-            <span className="border-b-[3px] border-[#c0462d] pb-2 sm:pb-4 inline-block w-fit">
+            <span className="border-b-[3px] border-[#964315] pb-2 sm:pb-4 inline-block w-fit">
               {t('title')}
             </span>
           </h2>
@@ -202,7 +202,7 @@ const Reservation = () => {
               <button
                 key={slot}
                 className={`p-2 h-12 sm:h-14 text-lg sm:text-xl text-white text-center justify-self-center sm:justify-self-end flex items-center justify-center transition 
-                  ${formData.selectedTime === slot ? 'bg-[#c0462d]' : 'bg-[#c0462d]'}`}
+                  ${formData.selectedTime === slot ? 'bg-[#964315]' : 'bg-[#964315]'}`}
                 onClick={() => handleTimeSelect(slot)}
               >
                 {slot}
@@ -211,7 +211,7 @@ const Reservation = () => {
           </div>
 
           <div
-            className={`mt-6 sm:mt-8 inline-block py-2 px-4 text-base sm:text-xl border-t-2 border-b-2 border-[#c0462d] text-[#c0462d] uppercase tracking-widest hover:bg-[#c0462d] font-black hover:text-white transition ${cinzel.className}`}
+            className={`mt-6 sm:mt-8 inline-block py-2 px-4 text-base sm:text-xl border-t-2 border-b-2 border-[#964315] text-[#964315] uppercase tracking-widest hover:bg-[#964315] font-black hover:text-white transition ${cinzel.className}`}
           >
             {t('alert_me')}
           </div>
