@@ -12,7 +12,6 @@ import { Poppins } from 'next/font/google';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { IoClose } from 'react-icons/io5';
 import ReservePopup from '../../../src/components/ReservationModal';
-import { GiLobArrow } from 'react-icons/gi';
 import { BsArrowDownCircleFill } from 'react-icons/bs';
 
 export const poppins = Poppins({
@@ -29,7 +28,6 @@ const cinzelDecorative = Cinzel_Decorative({
 
 export default function Banner() {
   const t = useTranslations('Banner');
-  const [showModal, setShowModal] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
 
   const arrowRef = useRef<HTMLDivElement>(null);
@@ -50,14 +48,6 @@ export default function Banner() {
     return () => clearInterval(interval);
   }, []);
 
-  useEffect(() => {
-    const hasVisited = sessionStorage.getItem('true');
-    if (!hasVisited) {
-      setShowModal(true);
-      sessionStorage.setItem('hasVisited', 'true');
-    }
-  }, []);
-
   const pathname = usePathname();
   const router = useRouter();
 
@@ -65,7 +55,6 @@ export default function Banner() {
     const newLocale = e.target.value;
     router.push({ pathname }, { locale: newLocale });
   };
-  
   const scrollToSectionById = (id: string) => {
   const section = document.getElementById(id);
   section?.scrollIntoView({ behavior: 'smooth' });
@@ -130,6 +119,8 @@ export default function Banner() {
                 </option>
               ))}
             </select>
+             
+
           </div>
         </div>
         <style jsx global>{`
