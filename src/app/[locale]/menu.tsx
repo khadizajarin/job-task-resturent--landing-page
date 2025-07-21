@@ -37,7 +37,7 @@ export default function Menu() {
   ];
 
   return (
-   <section id="menu" className={`relative lg:h-screen h-full pt-12 lg:pt-0 w-full bg-white text-black ${poppins.className}`}>
+   <section id="menu" className={`relative lg:h-screen h-full pt-12 lg:pt-0 w-full bg-white text-[1D1D1B] ${poppins.className}`}>
       <div className="max-w-7xl mx-auto px-4 h-full flex flex-col md:flex-row items-center justify-center gap-11">
 
                   <div className="absolute hidden lg:block inset-0 pointer-events-none z-0">

@@ -111,7 +111,9 @@ const Reservation = () => {
 
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-11 items-center justify-center z-10">
         <div className="w-full lg:w-3/5 text-white ">
-        <img
+        <Image 
+          width={400}
+          height={600}
           src="/images/reservation.png"
           alt="Restaurant Interior"
           className=" w-full h-auto"
@@ -190,7 +192,7 @@ const Reservation = () => {
           </h2>
 
           <p
-            className={`text-base sm:text-[1.12rem] leading-snug max-w-xl whitespace-pre-line mb-4 sm:mb-6 ${poppins.className}`}
+            className={`text-base sm:text-[1.12rem] text-[1D1D1B] leading-snug max-w-xl whitespace-pre-line mb-4 sm:mb-6 ${poppins.className}`}
           >
             {t('description')}
           </p>

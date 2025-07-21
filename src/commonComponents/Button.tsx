@@ -15,7 +15,7 @@
 //           relative inline-block px-8 py-3 border-1 border-white text-white 
 //           font-semibold uppercase tracking-wider overflow-hidden 
 //           transition-all duration-300 ease-in-out
-//           hover:text-black hover:bg-white
+//           hover:text-[1D1D1B] hover:bg-white
 //           ${className}
 //         `}
 //       >
