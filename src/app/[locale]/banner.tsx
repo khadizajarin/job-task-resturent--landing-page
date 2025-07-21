@@ -70,7 +70,7 @@ export default function Banner() {
   ];
 
   return (
-    <div className={`relative ${cinzel.className}`}>
+    <div className={`relative  w-full h-full ${cinzel.className}`}>
       {/* Header */}
       <header className="w-full text-white py-4 absolute z-50">
         <div className="mx-auto max-w-7xl px-4 flex items-center justify-between">
@@ -180,7 +180,7 @@ export default function Banner() {
         <div className="z-10 flex flex-col h-full">
           {/* Logo */}
           <div className="px-4 sm:px-40 pt-8 sm:pt-36 flex items-center justify-between relative">
-            <div className="flex-1 text-center absolute top-[3vw] left-1/2 -translate-x-1/2">
+            <div className="flex-1 text-center absolute top-[2.7vw] left-1/2 -translate-x-1/2">
               <Image
                 src="/images/logo-01.png"
                 alt="Logo"
@@ -212,13 +212,22 @@ export default function Banner() {
         </div>
 
         {/* Decorative Borders */}
-        <div className="pointer-events-none absolute inset-[2vw] z-10 hidden lg:block">
+        <div className="pointer-events-none absolute inset-[2vw] z-10 hidden lg:block md:block">
           {/* Border lines */}
+          {/* Top left border */}
           <div className="absolute top-[2vw] left-[4.9vw] w-[28vw] border-t-2 border-white" />
+          {/* Top right border */}
           <div className="absolute top-[2vw] right-[4.9vw] w-[28vw] border-t-2 border-white" />
+          {/* Bottom border */}
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[89.7%] border-b-2 border-white" />
+          {/* vertical border */}
+          {/* <div className="absolute top-1/2 right-0 lg:h-[70.4vh] sm:h-[50vh] md:h-[60vh]  xl:h-[74.6vh] 2xl:h-[85vh]  border-r-2 border-white lg:-translate-y-[47.5%] xl:-translate-y-[47.6%]" />
+          <div className="absolute top-1/2 left-0 md:h-[70.4vh] xl:h-[74.6vh] border-l-2 border-white lg:-translate-y-[47.5%] xl:-translate-y-[47.6%]" /> */}
+
           <div className="absolute top-1/2 right-0 h-[68.5vh] min-h-[500px] max-h-[700px] border-r-2 border-white -translate-y-[47%]" />
           <div className="absolute top-1/2 left-0 h-[68.5vh] min-h-[500px] max-h-[700px] border-l-2 border-white -translate-y-[47%]" />
+          
+
 
           {/* Corner curves */}
           <div className="absolute top-[2vw] left-0 w-[5vw] h-[5vw] border-b-2 border-r-2 border-white rounded-br-full z-10" />
@@ -242,7 +251,7 @@ export default function Banner() {
         </div>
 
         {/* Reservation Modal */}
-        <ReservePopup />
+        {/* <ReservePopup /> */}
       </div>
     </div>
   );

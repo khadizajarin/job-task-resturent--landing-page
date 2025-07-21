@@ -56,7 +56,7 @@ const Reservation = () => {
   return (
     <div id="reservation" className={`relative bg-white lg:h-screen h-full flex items-center justify-center ${poppins.className}`}>
        {/* Scattered Doodle Background */}
-                <div className="absolute inset-0 hidden lg:block pointer-events-none z-0">
+                  <div className="absolute inset-0 hidden lg:block pointer-events-none z-0">
                   <Image
                       src="/images/event-doodle1.png"
                       alt="Doodle 1"
@@ -109,15 +109,19 @@ const Reservation = () => {
                   </div>                
       
 
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-11 items-center justify-center z-10">
+      <div className="max-w-7xl max-h-full mx-auto flex flex-col lg:flex-row gap-11 items-center justify-center z-10">
+        {/* left side */}
         <div className="w-full lg:w-3/5 text-white ">
-        <Image 
-          width={400}
-          height={600}
-          src="/images/reservation.png"
-          alt="Restaurant Interior"
-          className=" w-full h-auto"
-        />
+          <div className="w-full max-h-[250px] overflow-hidden">
+            <Image 
+              src="/images/reservation.png"
+              alt="Restaurant Interior"
+              width={800} // you can adjust as needed
+              height={400}
+              className="w-full h-full object-cover object-bottom"
+            />
+          </div>
+
 
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-1 ">
           <select name="guests" value={formData.guests} onChange={handleChange} className="bg-[#964315] p-2 focus:outline-none focus:ring-0 focus:border-transparent
@@ -182,6 +186,8 @@ const Reservation = () => {
         </div>
         </div>
 
+
+          {/* right side */}
         <div className="w-full lg:w-2/5 h-full flex flex-col justify-center items-center lg:items-end text-center lg:text-right px-4 sm:px-8 py-8">
           <h2
             className={`text-3xl sm:text-4xl md:text-5xl mb-4 sm:mb-6 uppercase text-[#964315] font-black ${cinzelDecorative.className}`}

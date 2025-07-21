@@ -89,14 +89,42 @@ Deploy the site using:
 
 ```
 big-spuntino-website/
-├── assets/
-│   ├── images/          # Placeholder images for gallery and menu cards
-│   └── styles/          # CSS files (e.g., styles.css or Tailwind output)
-├── index.html           # Main homepage (or entry point for static site)
-├── scripts/             # JavaScript files for interactivity
-├── README.md            # This file
-└── package.json         # (Optional) If using Node.js/React
+├── .next/                      # Build output (auto-generated)
+├── messages/                   # Translation JSON files
+│   ├── de.json                 # German content
+│   └── en.json                 # English content
+├── node_modules/              # Project dependencies
+├── public/                    # Static assets (e.g., logo, images)
+├── src/
+│   ├── app/
+│   │   ├── [locale]/          # Locale-based routing (Next.js App Router)
+│   │   ├── banner.tsx
+│   │   ├── contact.tsx
+│   │   ├── events.tsx
+│   │   ├── gallery.tsx
+│   │   ├── job.tsx
+│   │   ├── layout.tsx         # Root layout component
+│   │   ├── menu.tsx
+│   │   ├── page.tsx           # Homepage entry
+│   │   ├── reservation.tsx
+│   │   ├── story.tsx
+│   │   └── globals.css        # Tailwind and base styles
+│   ├── commonComponents/      # Shared UI elements (if applicable)
+│   ├── components/            # Reusable React components
+│   ├── i18n/                  # i18n setup and helpers
+│   │   ├── navigation.ts
+│   │   ├── request.ts
+│   │   └── routing.ts
+│   ├── middleware.ts          # Locale redirect middleware
+├── .gitignore
+├── README.md
+├── next.config.ts             # Next.js config with i18n setup
+├── tsconfig.json              # TypeScript configuration
+├── package.json               # Project metadata and scripts
+├── package-lock.json
+├── postcss.config.mjs         # Tailwind/PostCSS configuration
 ```
+
 
 ---
 
@@ -127,4 +155,4 @@ khadiza131310@gmail.com
 
 For any questions or issues, please reach out to:
 
-📧 **tayebhossain2023@gmail.com**
+📧 **khadiza131310@gmail.com**
