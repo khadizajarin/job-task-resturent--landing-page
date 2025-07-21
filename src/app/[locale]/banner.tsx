@@ -2,10 +2,10 @@
 
 import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl'; // Import useLocale
 import { Link, usePathname, useRouter } from '../../i18n/navigation';
 import { routing } from '../../i18n/routing';
-import { PiStarFourFill } from "react-icons/pi";
+import { PiStarFourFill } from 'react-icons/pi';
 import { Cinzel_Decorative } from 'next/font/google';
 import { Cinzel } from 'next/font/google';
 import { Poppins } from 'next/font/google';
@@ -29,8 +29,10 @@ const cinzelDecorative = Cinzel_Decorative({
 export default function Banner() {
   const t = useTranslations('Banner');
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const locale = useLocale(); // Get the current locale using useLocale
   const arrowRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
     const arrow = arrowRef.current;
@@ -43,39 +45,34 @@ export default function Banner() {
       arrow.style.opacity = visible ? '1' : '0';
       arrow.style.transform = visible ? 'translateY(8px)' : 'translateY(0)';
       arrow.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-    }, 1200); // every 1.2s
+    }, 1200);
 
     return () => clearInterval(interval);
   }, []);
-
-  const pathname = usePathname();
-  const router = useRouter();
 
   const handleLocaleChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
     const newLocale = e.target.value;
     router.push({ pathname }, { locale: newLocale });
   };
+
   const scrollToSectionById = (id: string) => {
-  const section = document.getElementById(id);
-  section?.scrollIntoView({ behavior: 'smooth' });
-};
+    const section = document.getElementById(id);
+    section?.scrollIntoView({ behavior: 'smooth' });
+  };
 
-
- const navItems = [
-  { labelKey: 'nav.home', id: 'home' },
-  { labelKey: 'nav.menu', id: 'menu' },
-  { labelKey: 'nav.events', id: 'events' },
-  { labelKey: 'nav.reservation', id: 'reservation' },
-  { labelKey: 'nav.contact', id: 'contact' },
-  { labelKey: 'nav.stories', id: 'stories' },
-];
-
-
+  const navItems = [
+    { labelKey: 'nav.home', id: 'home' },
+    { labelKey: 'nav.menu', id: 'menu' },
+    { labelKey: 'nav.events', id: 'events' },
+    { labelKey: 'nav.reservation', id: 'reservation' },
+    { labelKey: 'nav.contact', id: 'contact' },
+    { labelKey: 'nav.stories', id: 'stories' },
+  ];
 
   return (
     <div className={`relative ${cinzel.className}`}>
       {/* Header */}
-      <header className="w-full  text-white py-4 absolute  z-50">
+      <header className="w-full text-white py-4 absolute z-50">
         <div className="mx-auto max-w-7xl px-4 flex items-center justify-between">
           {/* Marquee - hidden on small screens */}
           <div className="relative flex-1 mx-4 overflow-hidden hidden sm:block">
@@ -100,6 +97,7 @@ export default function Banner() {
             <select
               id="locale-select-right"
               onChange={handleLocaleChange}
+              value={locale} // Bind to the current locale
               className="bg-transparent text-white text-sm px-2 py-1 focus:outline-none focus:ring-0"
               style={{
                 backgroundColor: 'transparent',
@@ -119,8 +117,6 @@ export default function Banner() {
                 </option>
               ))}
             </select>
-             
-
           </div>
         </div>
         <style jsx global>{`
@@ -164,7 +160,7 @@ export default function Banner() {
       </nav>
 
       {/* Main Content */}
-      <div className="relative lg:h-screen h-[60vh]  w-full text-white overflow-hidden">
+      <div className="relative lg:h-screen h-[60vh] w-full text-white overflow-hidden">
         {/* Background */}
         <div className="fixed top-0 left-0 w-full h-screen -z-20">
           <Image
@@ -205,52 +201,47 @@ export default function Banner() {
               {t('hero.subtitle')}
             </h3>
 
-              <div className="absolute bottom-7 sm:bottom-12 flex flex-col items-center gap-1 sm:text-2xl uppercase tracking-widest" ref={arrowRef}>
-                  <BsArrowDownCircleFill className="w-3 h-3 sm:w-8 sm:h-8 text-white" />
-                <span className={`text-sm ${cinzel.className}`}>{t('explore')}</span>
-              </div>
+            <div
+              className="absolute bottom-7 sm:bottom-12 flex flex-col items-center gap-1 sm:text-2xl uppercase tracking-widest"
+              ref={arrowRef}
+            >
+              <BsArrowDownCircleFill className="w-3 h-3 sm:w-8 sm:h-8 text-white" />
+              <span className={`text-sm ${cinzel.className}`}>{t('explore')}</span>
+            </div>
           </div>
         </div>
 
-    
-{/* Decorative Borders */}
-<div className="pointer-events-none absolute inset-[2vw] z-10 hidden lg:block">
-  {/* Border lines */}
-  {/* TOP BORDER LEFT PART */}
-  <div className="absolute top-[2vw] left-[4.9vw] w-[28vw]  border-t-2 border-white" />
+        {/* Decorative Borders */}
+        <div className="pointer-events-none absolute inset-[2vw] z-10 hidden lg:block">
+          {/* Border lines */}
+          <div className="absolute top-[2vw] left-[4.9vw] w-[28vw] border-t-2 border-white" />
+          <div className="absolute top-[2vw] right-[4.9vw] w-[28vw] border-t-2 border-white" />
+          <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[89.7%] border-b-2 border-white" />
+          <div className="absolute top-1/2 right-0 h-[68.5vh] min-h-[500px] max-h-[700px] border-r-2 border-white -translate-y-[47%]" />
+          <div className="absolute top-1/2 left-0 h-[68.5vh] min-h-[500px] max-h-[700px] border-l-2 border-white -translate-y-[47%]" />
 
-  {/* TOP BORDER RIGHT PART */}
-  <div className="absolute top-[2vw] right-[4.9vw] w-[28vw]  border-t-2 border-white" />
+          {/* Corner curves */}
+          <div className="absolute top-[2vw] left-0 w-[5vw] h-[5vw] border-b-2 border-r-2 border-white rounded-br-full z-10" />
+          <div className="absolute bottom-0 left-0 w-[5vw] h-[5vw] border-t-2 border-r-2 border-white rounded-tr-full z-10" />
+          <div className="absolute bottom-0 right-0 w-[5vw] h-[5vw] border-t-2 border-l-2 border-white rounded-tl-full z-10" />
+          <div className="absolute top-[2vw] right-0 w-[5vw] h-[5vw] border-b-2 border-l-2 border-white rounded-bl-full z-10" />
 
-  {/* BOTTOM BORDER */}
-  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[89.7%] border-b-2 border-white" />
+          {/* Corner stars */}
+          <div className="absolute top-[0.5vw] -left-[1.5vw] w-[5vw] h-[5vw] flex items-center justify-center z-20">
+            <PiStarFourFill className="w-[1.5vw] h-[1.5vw] max-w-[24px] max-h-[24px]" />
+          </div>
+          <div className="absolute top-[0.5vw] -right-[1.5vw] w-[5vw] h-[5vw] flex items-center justify-center z-20">
+            <PiStarFourFill className="w-[1.5vw] h-[1.5vw] max-w-[24px] max-h-[24px]" />
+          </div>
+          <div className="absolute -bottom-[1.5vw] -left-[1.5vw] w-[5vw] h-[5vw] flex items-center justify-center z-20">
+            <PiStarFourFill className="w-[1.5vw] h-[1.5vw] max-w-[24px] max-h-[24px]" />
+          </div>
+          <div className="absolute -bottom-[1.5vw] -right-[1.5vw] w-[5vw] h-[5vw] flex items-center justify-center z-20">
+            <PiStarFourFill className="w-[1.5vw] h-[1.5vw] max-w-[24px] max-h-[24px]" />
+          </div>
+        </div>
 
-  {/* VERTICAL BORDERS */}
-  <div className="absolute top-1/2 right-0 h-[68.5vh] min-h-[500px] max-h-[700px] border-r-2 border-white -translate-y-[47%]" />
-  <div className="absolute top-1/2 left-0 h-[68.5vh] min-h-[500px] max-h-[700px] border-l-2 border-white -translate-y-[47%]" />
-
-  {/* Corner curves */}
-  <div className="absolute top-[2vw] left-0 w-[5vw] h-[5vw]  border-b-2 border-r-2 border-white rounded-br-full z-10" />
-  <div className="absolute bottom-0 left-0 w-[5vw] h-[5vw]  border-t-2 border-r-2 border-white rounded-tr-full z-10" />
-  <div className="absolute bottom-0 right-0 w-[5vw] h-[5vw]  border-t-2 border-l-2 border-white rounded-tl-full z-10" />
-  <div className="absolute top-[2vw] right-0 w-[5vw] h-[5vw]  border-b-2 border-l-2 border-white rounded-bl-full z-10" />
-
-  {/* Corner stars */}
-  <div className="absolute top-[0.5vw] -left-[1.5vw] w-[5vw] h-[5vw]  flex items-center justify-center z-20">
-    <PiStarFourFill className="w-[1.5vw] h-[1.5vw] max-w-[24px] max-h-[24px]" />
-  </div>
-  <div className="absolute top-[0.5vw] -right-[1.5vw] w-[5vw] h-[5vw]  flex items-center justify-center z-20">
-    <PiStarFourFill className="w-[1.5vw] h-[1.5vw] max-w-[24px] max-h-[24px]" />
-  </div>
-  <div className="absolute -bottom-[1.5vw] -left-[1.5vw] w-[5vw] h-[5vw]  flex items-center justify-center z-20">
-    <PiStarFourFill className="w-[1.5vw] h-[1.5vw] max-w-[24px] max-h-[24px]" />
-  </div>
-  <div className="absolute -bottom-[1.5vw] -right-[1.5vw] w-[5vw] h-[5vw]  flex items-center justify-center z-20">
-    <PiStarFourFill className="w-[1.5vw] h-[1.5vw] max-w-[24px] max-h-[24px]" />
-  </div>
-</div>
-
-        {/* Reservation Modal  */}
+        {/* Reservation Modal */}
         <ReservePopup />
       </div>
     </div>
