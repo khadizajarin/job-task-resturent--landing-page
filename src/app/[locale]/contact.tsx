@@ -56,7 +56,7 @@ export default function Contact() {
           
           <div>
             <h2
-              className={`text-5xl mb-6 uppercase text-white font-black ${cinzelDecorative.className}`}
+              className={`text-5xl mb-6 text-white font-black ${cinzelDecorative.className}`}
             >
               <span className="border-b-[3px] border-white pb-4 font-black inline-block w-fit">
                 {t('hoursTitle')}
@@ -73,7 +73,7 @@ export default function Contact() {
         {/* Right column */}
         <div className={`max-w-lg h-full text-left flex flex-col justify-center`}>
           <h2
-            className={`text-5xl mb-6 uppercase text-white font-black ${cinzelDecorative.className}`}
+            className={`text-5xl mb-6 text-white font-black ${cinzelDecorative.className}`}
           >
             <span className="border-b-[3px] border-white pb-4 inline-block w-fit">
               {t('contactTitle')}
@@ -95,7 +95,7 @@ export default function Contact() {
           </ul>
 
           <h2
-            className={`mt-8 text-5xl mb-6 uppercase text-white ${cinzelDecorative.className}`}
+            className={`mt-8 text-5xl mb-6 text-white ${cinzelDecorative.className}`}
           >
             <span className="border-b-[3px] border-white pb-4 inline-block w-fit">
               {t('followUs')}

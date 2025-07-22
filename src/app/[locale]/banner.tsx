@@ -137,7 +137,7 @@ export default function Banner() {
           {navItems.map(({ labelKey, id }) => (
             <button
               key={id}
-              className="uppercase text-xl tracking-wide py-2"
+              className="text-xl tracking-wide py-2"
               onClick={() => setMenuOpen(false)}
             >
               {t(labelKey)}
@@ -152,7 +152,7 @@ export default function Banner() {
           <button
             key={id}
             onClick={() => scrollToSectionById(id)}
-            className="uppercase tracking-widest text-[1.5rem] whitespace-nowrap border-b-2 border-white pb-4"
+            className="tracking-widest text-[1.5rem] whitespace-nowrap border-b-2 border-white pb-4"
           >
             {t(labelKey)}
           </button>
@@ -192,17 +192,17 @@ export default function Banner() {
 
           {/* Hero Text */}
           <div className="flex-grow flex flex-col items-center justify-center text-center px-4 font-black">
-            <h1 className="text-3xl sm:text-7xl tracking-[0.2em] sm:tracking-[0.3em] leading-tight uppercase mb-4 sm:mb-6 max-w-3xl sm:max-w-4xl mx-auto">
+            <h1 className="text-3xl sm:text-7xl tracking-[0.2em] sm:tracking-[0.3em] leading-tight mb-4 sm:mb-6 max-w-3xl sm:max-w-4xl mx-auto">
               {t('hero.title')}
             </h1>
             <h3
-              className={`uppercase text-lg sm:text-3xl tracking-[0.05em] sm:tracking-[0.1em] max-w-3xl sm:max-w-4xl mx-auto ${poppins.className}`}
+              className={`text-lg sm:text-3xl tracking-[0.05em] sm:tracking-[0.1em] max-w-3xl sm:max-w-4xl mx-auto ${poppins.className}`}
             >
               {t('hero.subtitle')}
             </h3>
 
             <div
-              className="absolute bottom-7 sm:bottom-12 flex flex-col items-center gap-1 sm:text-2xl uppercase tracking-widest"
+              className="absolute bottom-7 sm:bottom-12 flex flex-col items-center gap-1 sm:text-2xl tracking-widest"
               ref={arrowRef}
             >
               <BsArrowDownCircleFill className="w-3 h-3 sm:w-8 sm:h-8 text-white" />
@@ -224,8 +224,17 @@ export default function Banner() {
           {/* <div className="absolute top-1/2 right-0 lg:h-[70.4vh] sm:h-[50vh] md:h-[60vh]  xl:h-[74.6vh] 2xl:h-[85vh]  border-r-2 border-white lg:-translate-y-[47.5%] xl:-translate-y-[47.6%]" />
           <div className="absolute top-1/2 left-0 md:h-[70.4vh] xl:h-[74.6vh] border-l-2 border-white lg:-translate-y-[47.5%] xl:-translate-y-[47.6%]" /> */}
 
-          <div className="absolute top-1/2 right-0 h-[68.5vh] min-h-[500px] max-h-[700px] border-r-2 border-white -translate-y-[47%]" />
-          <div className="absolute top-1/2 left-0 h-[68.5vh] min-h-[500px] max-h-[700px] border-l-2 border-white -translate-y-[47%]" />
+          {/* <div className="absolute top-1/2 right-0 h-[68.5vh] min-h-[500px] max-h-[700px] border-r-2 border-white -translate-y-[47%]" />
+          <div className="absolute top-1/2 left-0 h-[68.5vh] min-h-[500px] max-h-[700px] border-l-2 border-white -translate-y-[47%]" /> */}
+
+          <div className="absolute top-1/2 right-0 border-r-2 border-white -translate-y-[47%]"
+              style={{
+                height: 'calc(100vh - 16vw)', // Full height minus top/bottom margins
+              }} />
+          <div className="absolute top-1/2 left-0 border-l-2 border-white -translate-y-[47%]"
+              style={{
+                height: 'calc(100vh - 16vw)', // Full height minus top/bottom margins
+              }} />
           
 
 

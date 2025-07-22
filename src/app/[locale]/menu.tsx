@@ -97,7 +97,7 @@ export default function Menu() {
 
         {/* Left text */}
         <div className="md:w-1/2 w-full text-left">
-          <h2 className={`text-5xl mb-6 uppercase text-[#964315] font-black ${cinzelDecorative.className}`}>
+          <h2 className={`text-5xl mb-6 text-[#964315] font-black ${cinzelDecorative.className}`}>
             <span className="border-b-[3px] border-[#964315] pb-4 inline-block w-fit">
               {t('title')}
             </span>
@@ -124,7 +124,7 @@ export default function Menu() {
             <a
               href="/menu.pdf"
               target="_blank"
-              className={`py-2 px-2 text-xl border-t-2 border-b-2 border-[#964315] text-[#964315] uppercase tracking-widest hover:bg-[#964315] font-black hover:text-white transition ${cinzel.className}`}
+              className={`py-2 px-2 text-xl border-t-2 border-b-2 border-[#964315] text-[#964315] tracking-widest hover:bg-[#964315] font-black hover:text-white transition ${cinzel.className}`}
             >
             {t('viewMenu')}
           </a>
@@ -148,7 +148,7 @@ export default function Menu() {
                   className="w-full h-full object-cover"
                 />
                 <div
-                  className={`absolute bottom-3 left-0 w-full bg-[#964315]/70 text-white text-xl tracking-wider uppercase px-2 py-2 font-black shadow-lg ${cinzel.className}`}
+                  className={`absolute bottom-3 left-0 w-full bg-[#964315]/70 text-white text-xl tracking-wider px-2 py-2 font-black shadow-lg ${cinzel.className}`}
                 >
                   {t(`blocks.${block.key}`)}
                 </div>

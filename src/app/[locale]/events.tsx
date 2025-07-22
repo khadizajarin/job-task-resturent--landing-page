@@ -131,7 +131,7 @@ export default function Events() {
 
             {/* Text Content */}
             <main className="relative z-20 w-full lg:pt-0 pt-14 max-w-xl text-[1D1D1B] text-right">
-                <h2 className={`text-5xl mb-6 uppercase text-[#964315] font-black ${cinzelDecorative.className}`}>
+                <h2 className={`text-5xl mb-6 text-[#964315] font-black ${cinzelDecorative.className}`}>
                     <span className="border-b-[3px] border-[#964315] pb-4 inline-block w-fit">
                     {t('title')}
                     </span>
@@ -153,7 +153,7 @@ export default function Events() {
                     <div className="pt-6">
                     <button
                         onClick={() => scrollToSectionById("contact")}
-                        className={`py-2 px-2 text-xl border-t-2 border-b-2 border-[#964315] text-[#964315] uppercase tracking-widest hover:bg-[#964315] font-black hover:text-white transition ${cinzel.className}`}
+                        className={`py-2 px-2 text-xl border-t-2 border-b-2 border-[#964315] text-[#964315] tracking-widest hover:bg-[#964315] font-black hover:text-white transition ${cinzel.className}`}
                     >
                         {t('contact')}
                     </button>

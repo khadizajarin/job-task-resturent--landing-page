@@ -180,7 +180,7 @@ const Reservation = () => {
             {t("info_3")} <a href="https://www.bigspontino.com/" target="_blank" className="underline">https://www.bigspontino.com/</a>
           </p>
 
-            <div className={`mt-8 inline-block py-2 px-4 text-xl border-t-2 border-b-2 border-white text-white uppercase tracking-widest hover:bg-[#964315] font-black hover:text-white transition ${cinzel.className}`}>
+            <div className={`mt-8 inline-block py-2 px-4 text-xl border-t-2 border-b-2 border-white text-white tracking-widest hover:bg-[#964315] font-black hover:text-white transition ${cinzel.className}`}>
             {t('confirm')}
           </div>
         </div>
@@ -190,7 +190,7 @@ const Reservation = () => {
           {/* right side */}
         <div className="w-full lg:w-2/5 h-full flex flex-col justify-center items-center lg:items-end text-center lg:text-right px-4 sm:px-8 py-8">
           <h2
-            className={`text-3xl sm:text-4xl md:text-5xl mb-4 sm:mb-6 uppercase text-[#964315] font-black ${cinzelDecorative.className}`}
+            className={`text-3xl sm:text-4xl md:text-5xl mb-4 sm:mb-6 text-[#964315] font-black ${cinzelDecorative.className}`}
           >
             <span className="border-b-[3px] border-[#964315] pb-2 sm:pb-4 inline-block w-fit">
               {t('title')}
@@ -219,7 +219,7 @@ const Reservation = () => {
           </div>
 
           <div
-            className={`mt-6 sm:mt-8 inline-block py-2 px-4 text-base sm:text-xl border-t-2 border-b-2 border-[#964315] text-[#964315] uppercase tracking-widest hover:bg-[#964315] font-black hover:text-white transition ${cinzel.className}`}
+            className={`mt-6 sm:mt-8 inline-block py-2 px-4 text-base sm:text-xl border-t-2 border-b-2 border-[#964315] text-[#964315] tracking-widest hover:bg-[#964315] font-black hover:text-white transition ${cinzel.className}`}
           >
             {t('alert_me')}
           </div>

@@ -76,7 +76,7 @@ export default function Job() {
 
 
         <div className="max-w-7xl mx-auto space-y-8 z-40">
-          <h2 className={`text-5xl mb-6 uppercase text-white font-black ${cinzelDecorative.className}`}>
+          <h2 className={`text-5xl mb-6 text-white font-black ${cinzelDecorative.className}`}>
             <span className="border-b-[3px] border-white pb-4 inline-block w-fit">
               {t('title')}
             </span>
@@ -89,7 +89,7 @@ export default function Job() {
           <p className="text-lg text-white">{t('description')}</p>
 
           
-         <div className={`inline-block py-2 px-4 text-xl border-t-2 border-b-2 border-white text-white uppercase tracking-widest hover:bg-[#964315] font-black hover:text-white transition ${cinzel.className}`}>
+         <div className={`inline-block py-2 px-4 text-xl border-t-2 border-b-2 border-white text-white tracking-widest hover:bg-[#964315] font-black hover:text-white transition ${cinzel.className}`}>
             {t('applyNow')}
           </div>
       </div>
