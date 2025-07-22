@@ -221,12 +221,6 @@ export default function Banner() {
           {/* Bottom border */}
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[89.7%] border-b-2 border-white" />
           {/* vertical border */}
-          {/* <div className="absolute top-1/2 right-0 lg:h-[70.4vh] sm:h-[50vh] md:h-[60vh]  xl:h-[74.6vh] 2xl:h-[85vh]  border-r-2 border-white lg:-translate-y-[47.5%] xl:-translate-y-[47.6%]" />
-          <div className="absolute top-1/2 left-0 md:h-[70.4vh] xl:h-[74.6vh] border-l-2 border-white lg:-translate-y-[47.5%] xl:-translate-y-[47.6%]" /> */}
-
-          {/* <div className="absolute top-1/2 right-0 h-[68.5vh] min-h-[500px] max-h-[700px] border-r-2 border-white -translate-y-[47%]" />
-          <div className="absolute top-1/2 left-0 h-[68.5vh] min-h-[500px] max-h-[700px] border-l-2 border-white -translate-y-[47%]" /> */}
-
           <div className="absolute top-1/2 right-0 border-r-3 border-white -translate-y-[47.2%]"
               style={{
                 height: 'calc(100vh - 16vw)', // Full height minus top/bottom margins
