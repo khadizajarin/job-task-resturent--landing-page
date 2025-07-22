@@ -254,7 +254,7 @@ export default function Banner() {
         </div>
 
         {/* Reservation Modal */}
-        {/* <ReservePopup /> */}
+        <ReservePopup />
       </div>
     </div>
   );
