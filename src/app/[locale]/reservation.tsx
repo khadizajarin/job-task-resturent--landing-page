@@ -198,7 +198,7 @@ const Reservation = () => {
           </h2>
 
           <p
-            className={`text-base sm:text-[1.12rem] text-[1D1D1B] leading-snug max-w-xl whitespace-pre-line mb-4 sm:mb-6 ${poppins.className}`}
+            className={`text-base sm:text-[1.12rem] text-[#1D1D1B] leading-snug max-w-xl whitespace-pre-line mb-4 sm:mb-6 ${poppins.className}`}
           >
             {t('description')}
           </p>

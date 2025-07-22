@@ -130,7 +130,7 @@ export default function Events() {
             </div>
 
             {/* Text Content */}
-            <main className="relative z-20 w-full lg:pt-0 pt-14 max-w-xl text-[1D1D1B] text-right">
+            <main className="relative z-20 w-full lg:pt-0 pt-14 max-w-xl text-[#1D1D1B] text-right">
                 <h2 className={`text-5xl mb-6 text-[#964315] font-black ${cinzelDecorative.className}`}>
                     <span className="border-b-[3px] border-[#964315] pb-4 inline-block w-fit">
                     {t('title')}
