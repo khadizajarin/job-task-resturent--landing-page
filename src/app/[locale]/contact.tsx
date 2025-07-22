@@ -95,7 +95,7 @@ export default function Contact() {
           </ul>
 
           <h2
-            className={`mt-8 text-5xl mb-6 text-white ${cinzelDecorative.className}`}
+            className={`mt-8 text-5xl mb-6 text-white font-black ${cinzelDecorative.className}`}
           >
             <span className="border-b-[3px] border-white pb-4 inline-block w-fit">
               {t('followUs')}

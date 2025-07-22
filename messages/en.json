@@ -2,12 +2,12 @@
 
    "Banner": {
     "nav": {
-      "home": "Home",
-      "menu": "Menu",
-      "events": "Events",
-      "reservation": "Reservation",
-      "contact": "Contact",
-      "stories": "Our Stories"
+      "home": "home",
+      "menu": "menu",
+      "events": "events",
+      "reservation": "reservation",
+      "contact": "contact",
+      "stories": "our stories"
     },
     "brand": "BigSpuntino",
     "social": {
@@ -19,7 +19,7 @@
     "explore": "Explore Now",
     "opening": "OPENING HOURS: Wed–Fri: 11:00 – 23:00 | Sat: 10:00 – 23:00 | Sun: 10:00 – 17:00",
     "hero": {
-      "title": "We have a table for you",
+      "title": "we have A Table for You",
       "subtitle": "The small, fine day bar in the middle of lively Winterhude for the ‘big times’"
     }
   },
@@ -75,7 +75,7 @@
   "mobile": "Mobile No",
   "confirm": "Confirm",
   "alert_me": "Alert Me",
-  "headline": "WE ARE THRILLED TO HAVE YOU JOIN US",
+  "headline": "We are thrilled to have you join us",
   "info_1": "Secure your spot for up to 8 people 30 days ahead of a date; for larger groups (from 9 up to 30), 60 days ahead of a date, with a set menu.",
   "info_2": "For reservations of 30 people or more and special occasions, please contact us at",
   "info_3": "*Please note: we don’t accept normal reservations via email. For more information, please visit"

@@ -46,42 +46,42 @@ export default function GalleryMosaic() {
                         alt="Doodle 1"
                         width={100}
                         height={100}
-                        className="absolute top-8 left-10 opacity-40"
+                        className="absolute top-8 left-10 opacity-30"
                     />
                     <Image
                         src="/images/event-doodle2.png"
                         alt="Doodle 2"
                         width={100}
                         height={100}
-                        className="absolute top-40 right-16 opacity-40 rotate-12"
+                        className="absolute top-40 right-16 opacity-30 rotate-12"
                     />
                     <Image
                         src="/images/event-doodle3.png"
                         alt="Doodle 3"
                         width={100}
                         height={100}
-                        className="absolute bottom-8 left-[5%] opacity-50 -rotate-6"
+                        className="absolute bottom-8 left-[5%] opacity-30 -rotate-6"
                     />
                     <Image
                         src="/images/event-doodle4.png"
                         alt="Doodle 4"
                         width={100}
                         height={100}
-                        className="absolute top-[30%] left-[55%] opacity-40 rotate-[15deg]"
+                        className="absolute top-[30%] left-[55%] opacity-30 rotate-[15deg]"
                     />
                     <Image
                         src="/images/event-doodle5.png"
                         alt="Doodle 5"
                         width={100}
                         height={100}
-                        className="absolute bottom-[30%] right-[10%] opacity-40 -rotate-[10deg]"
+                        className="absolute bottom-[30%] right-[10%] opacity-30 -rotate-[10deg]"
                     />
                     <Image
                         src="/images/event-doodle6.png"
                         alt="Doodle 6"
                         width={100}
                         height={100}
-                        className="absolute top-[45%] left-[10%] opacity-50 rotate-[25deg]"
+                        className="absolute top-[45%] left-[10%] opacity-30 rotate-[25deg]"
                     />
                     <Image
                         src="/images/event-doodle7.png"
@@ -133,7 +133,7 @@ export default function GalleryMosaic() {
 
 
         {/* Text Content - Right Side */}
-        <div className="relative z-20 w-full lg:w-5/12 max-w-xl text-[1D1D1B] px-4 lg:px-0 text-right">
+        <div className="relative z-20 w-full lg:w-5/12 max-w-xl text-[1D1D1B] px-4 lg:px-0 text-right ">
           <h2 className={`text-5xl mb-6 text-[#964315] font-black ${cinzelDecorative.className}`}>
             <span className="border-b-[3px] border-[#964315] pb-4 inline-block w-fit">
               {t('title')}

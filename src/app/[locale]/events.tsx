@@ -41,7 +41,7 @@ export default function Events() {
                 alt="Doodle 1"
                 width={100}
                 height={100}
-                className="absolute top-4 left-50 opacity-40"
+                className="absolute top-4 left-50 opacity-30"
             />
             <Image
                 src="/images/event-doodle2.png"
@@ -55,28 +55,28 @@ export default function Events() {
                 alt="Doodle 3"
                 width={100}
                 height={100}
-                className="absolute bottom-16 left-[35%] opacity-50 -rotate-6"
+                className="absolute bottom-16 left-[35%] opacity-30 -rotate-6"
             />
             <Image
                 src="/images/event-doodle4.png"
                 alt="Doodle 4"
                 width={100}
                 height={100}
-                className="absolute top-[20%] left-[50%] opacity-40 rotate-[15deg]"
+                className="absolute top-[20%] left-[50%] opacity-30 rotate-[15deg]"
             />
             <Image
                 src="/images/event-doodle5.png"
                 alt="Doodle 5"
                 width={100}
                 height={100}
-                className="absolute bottom-[30%] right-[10%] opacity-40 -rotate-[10deg]"
+                className="absolute bottom-[30%] right-[10%] opacity-30 -rotate-[10deg]"
             />
             <Image
                 src="/images/event-doodle6.png"
                 alt="Doodle 6"
                 width={100}
                 height={100}
-                className="absolute top-[55%] left-[15%] opacity-50 rotate-[25deg]"
+                className="absolute top-[55%] left-[15%] opacity-30 rotate-[25deg]"
             />
             <Image
                 src="/images/event-doodle7.png"

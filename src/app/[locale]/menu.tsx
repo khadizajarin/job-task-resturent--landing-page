@@ -46,21 +46,21 @@ export default function Menu() {
                         alt="Doodle 1"
                         width={100}
                         height={100}
-                        className="absolute top-4 left-40 opacity-50"
+                        className="absolute top-4 left-40 opacity-30"
                     />
                     <Image
                         src="/images/menu-doodle2.png"
                         alt="Doodle 2"
                         width={100}
                         height={100}
-                        className="absolute top-40 right-56 opacity-50 rotate-12"
+                        className="absolute top-40 right-56 opacity-30 rotate-12"
                     />
                     <Image
                         src="/images/menu-doodle3.png"
                         alt="Doodle 3"
                         width={100}
                         height={100}
-                        className="absolute bottom-68 right-[5%] opacity-50 -rotate-6"
+                        className="absolute bottom-68 right-[5%] opacity-30 -rotate-6"
                     />
                     <Image
                         src="/images/menu-doodle4.png"
@@ -81,7 +81,7 @@ export default function Menu() {
                         alt="Doodle 6"
                         width={100}
                         height={100}
-                        className="absolute top-[75%] left-[45%] opacity-50 rotate-[25deg]"
+                        className="absolute top-[75%] left-[45%] opacity-30 rotate-[25deg]"
                     />
                     <Image
                         src="/images/event-doodle7.png"
@@ -139,7 +139,7 @@ export default function Menu() {
               key={block.key}
               className={`relative text-center ${index % 2 === 1 ? 'mt-[-3rem]' : ''}`}
               data-aos="fade-up"
-              data-aos-delay={index * 150}
+              data-aos-delay={index * 130}
             >
               <div className="relative w-full h-64 overflow-hidden ">
                 <img

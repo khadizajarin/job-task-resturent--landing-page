@@ -1,12 +1,12 @@
 {
   "Banner": {
     "nav": {
-      "home": "Startseite",
-      "menu": "Speisekarte",
-      "events": "Veranstaltungen",
-      "reservation": "Reservierung",
-      "contact": "Kontakt",
-      "stories": "Unsere Geschichten"
+      "home": "startseite",
+      "menu": "speisekarte",
+      "events": "veranstaltungen",
+      "reservation": "reservierung",
+      "contact": "kontakt",
+      "stories": "unsere geschichten"
     },
     "brand": "BigSpuntino",
     "social": {
@@ -74,7 +74,7 @@
   "mobile": "Telefonnummer",
   "confirm": "Bestätigen",
   "alert_me": "Benachrichtige mich",
-  "headline": "WIR FREUEN UNS, SIE BEI UNS BEGRÜSSEN ZU DÜRFEN",
+  "headline": "Wir freuen uns, Sie bei uns begrüßen zu dürfen",
   "info_1": "Reservieren Sie für bis zu 8 Personen bis zu 30 Tage im Voraus; für größere Gruppen (9 bis 30 Personen) bis zu 60 Tage im Voraus, mit festem Menü.",
   "info_2": "Für Reservierungen ab 30 Personen und besondere Anlässe kontaktieren Sie uns bitte unter",
   "info_3": "*Bitte beachten Sie: Wir akzeptieren keine normalen Reservierungen per E-Mail. Weitere Informationen finden Sie unter"

@@ -152,7 +152,7 @@ export default function Banner() {
           <button
             key={id}
             onClick={() => scrollToSectionById(id)}
-            className="tracking-widest text-[1.5rem] whitespace-nowrap border-b-2 border-white pb-4"
+            className="tracking-widest text-[1.5rem] whitespace-nowrap border-b-3 border-white pb-4"
           >
             {t(labelKey)}
           </button>
@@ -179,7 +179,7 @@ export default function Banner() {
         {/* Content Container */}
         <div className="z-10 flex flex-col h-full">
           {/* Logo */}
-          <div className="px-4 sm:px-40 pt-8 sm:pt-36 flex items-center justify-between relative">
+          <div className="px-4 sm:px-40 pt-8 sm:pt-36 flex items-center justify-between uppercase relative">
             <div className="flex-1 text-center absolute top-[2.7vw] left-1/2 -translate-x-1/2">
               <Image
                 src="/images/logo-01.png"
@@ -192,21 +192,21 @@ export default function Banner() {
 
           {/* Hero Text */}
           <div className="flex-grow flex flex-col items-center justify-center text-center px-4 font-black">
-            <h1 className="text-3xl sm:text-7xl tracking-[0.2em] sm:tracking-[0.3em] leading-tight mb-4 sm:mb-6 max-w-3xl sm:max-w-4xl mx-auto">
-              {t('hero.title')}
-            </h1>
-            <h3
-              className={`text-lg sm:text-3xl tracking-[0.05em] sm:tracking-[0.1em] max-w-3xl sm:max-w-4xl mx-auto ${poppins.className}`}
-            >
-              {t('hero.subtitle')}
-            </h3>
+            <h1 className={`text-3xl sm:text-7xl tracking-[0.2em] sm:tracking-[0.3em] leading-tight mb-4 pt-20 sm:mb-6 max-w-3xl sm:max-w-5xl sm:px-4 mx-auto ${cinzelDecorative.className}`}>
+                {t('hero.title')}
+              </h1>
+              <h3
+                className={`text-lg sm:text-3xl leading-normal tracking-[0.05em] sm:tracking-[0.1em] max-w-3xl sm:max-w-4xl mx-auto ${poppins.className}`}
+              >
+                {t('hero.subtitle')}
+              </h3>
 
-            <div
-              className="absolute bottom-7 sm:bottom-12 flex flex-col items-center gap-1 sm:text-2xl tracking-widest"
-              ref={arrowRef}
-            >
-              <BsArrowDownCircleFill className="w-3 h-3 sm:w-8 sm:h-8 text-white" />
-              <span className={`text-sm ${cinzel.className}`}>{t('explore')}</span>
+              <div
+                className="absolute bottom-7 sm:bottom-[4rem] flex flex-col items-center gap-1 sm:text-2xl tracking-widest"
+                ref={arrowRef}
+              >
+                <BsArrowDownCircleFill className="w-3 h-3 sm:w-8 sm:h-8 text-white" />
+                <span className={`text-sm ${cinzel.className}`}>{t('explore')}</span>
             </div>
           </div>
         </div>
@@ -215,9 +215,9 @@ export default function Banner() {
         <div className="pointer-events-none absolute inset-[2vw] z-10 hidden lg:block md:block">
           {/* Border lines */}
           {/* Top left border */}
-          <div className="absolute top-[2vw] left-[4.9vw] w-[28vw] border-t-2 border-white" />
+          <div className="absolute top-[2vw] left-[4.9vw] w-[28vw] border-t-3 border-white" />
           {/* Top right border */}
-          <div className="absolute top-[2vw] right-[4.9vw] w-[28vw] border-t-2 border-white" />
+          <div className="absolute top-[2vw] right-[4.9vw] w-[28vw] border-t-3 border-white" />
           {/* Bottom border */}
           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[89.7%] border-b-2 border-white" />
           {/* vertical border */}
@@ -227,11 +227,11 @@ export default function Banner() {
           {/* <div className="absolute top-1/2 right-0 h-[68.5vh] min-h-[500px] max-h-[700px] border-r-2 border-white -translate-y-[47%]" />
           <div className="absolute top-1/2 left-0 h-[68.5vh] min-h-[500px] max-h-[700px] border-l-2 border-white -translate-y-[47%]" /> */}
 
-          <div className="absolute top-1/2 right-0 border-r-2 border-white -translate-y-[47%]"
+          <div className="absolute top-1/2 right-0 border-r-3 border-white -translate-y-[47.2%]"
               style={{
                 height: 'calc(100vh - 16vw)', // Full height minus top/bottom margins
               }} />
-          <div className="absolute top-1/2 left-0 border-l-2 border-white -translate-y-[47%]"
+          <div className="absolute top-1/2 left-0 border-l-3 border-white -translate-y-[47.2%]"
               style={{
                 height: 'calc(100vh - 16vw)', // Full height minus top/bottom margins
               }} />
@@ -239,10 +239,10 @@ export default function Banner() {
 
 
           {/* Corner curves */}
-          <div className="absolute top-[2vw] left-0 w-[5vw] h-[5vw] border-b-2 border-r-2 border-white rounded-br-full z-10" />
-          <div className="absolute bottom-0 left-0 w-[5vw] h-[5vw] border-t-2 border-r-2 border-white rounded-tr-full z-10" />
-          <div className="absolute bottom-0 right-0 w-[5vw] h-[5vw] border-t-2 border-l-2 border-white rounded-tl-full z-10" />
-          <div className="absolute top-[2vw] right-0 w-[5vw] h-[5vw] border-b-2 border-l-2 border-white rounded-bl-full z-10" />
+          <div className="absolute top-[2vw] left-0 w-[5vw] h-[5vw] border-b-3 border-r-3 border-white rounded-br-full z-10" />
+          <div className="absolute bottom-0 left-0 w-[5vw] h-[5vw] border-t-3 border-r-3 border-white rounded-tr-full z-10" />
+          <div className="absolute bottom-0 right-0 w-[5vw] h-[5vw] border-t-3 border-l-3 border-white rounded-tl-full z-10" />
+          <div className="absolute top-[2vw] right-0 w-[5vw] h-[5vw] border-b-3 border-l-3 border-white rounded-bl-full z-10" />
 
           {/* Corner stars */}
           <div className="absolute top-[0.5vw] -left-[1.5vw] w-[5vw] h-[5vw] flex items-center justify-center z-20">
