@@ -87,10 +87,10 @@ export default function Contact() {
                <Image src="/images/phone.png" alt="phone" width={40} height={40} className=""/> 040 / 69 45 68 28
             </li>
             <li className="flex items-center gap-3">
-              <Image src="/images/email.png" alt="email" width={40} height={40} className=""/> mail@bigspuntino.de
+              <Image src="/images/email.png" alt="email" width={40} height={40} className=""/> mail@restuerent.de
             </li>
             <li className="flex items-center gap-3">
-              <Image src="/images/web.png" alt="web" width={40} height={40} className=""/>  bigspuntino.de
+              <Image src="/images/web.png" alt="web" width={40} height={40} className=""/>  restuerent.de
             </li>
           </ul>
 
