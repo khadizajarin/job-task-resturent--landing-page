@@ -39,14 +39,8 @@ export default function Contact() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14 h-full justify-start items-center">
         {/* Left column */}
         <div className="w-full h-full flex flex-col justify-evenly">
-          <div className="w-full ">
-            <Image
-              src="/images/logo-01.png"
-              alt="Logo"
-              width={480}
-              height={400}
-              className="mb-4"
-            />
+          <div className="w-full "> 
+            <h1 className={`w-full flex-1 text-left text-[4vw] font-bold ${cinzelDecorative.className}`}>Ristorante</h1>
             <p className={`text-xl leading-tight mb-8 max-w-lg ${poppins.className}`}>
             {t('description')}
           </p>

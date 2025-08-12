@@ -180,14 +180,10 @@ export default function Banner() {
         <div className="z-10 flex flex-col h-full">
           {/* Logo */}
           <div className="px-4 sm:px-40 pt-8 sm:pt-36 flex items-center justify-between uppercase relative">
-            <div className="flex-1 text-center absolute top-[2.7vw] left-1/2 -translate-x-1/2">
-              <Image
-                src="/images/logo-01.png"
-                alt="Logo"
-                width={400}
-                height={400}
-              />
-            </div>
+            <div className={`w-full flex-1 text-center absolute top-[1.9vw] left-1/2 -translate-x-1/2 text-[3.9vw] font-bold ${cinzelDecorative.className}`} >
+                Ristorante
+              </div>
+
           </div>
 
           {/* Hero Text */}
