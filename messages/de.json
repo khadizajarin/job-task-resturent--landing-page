@@ -8,7 +8,7 @@
       "contact": "kontakt",
       "stories": "unsere geschichten"
     },
-    "brand": "BigSpuntino",
+    "brand": "Ristorante",
     "social": {
       "facebook": "Facebook",
       "instagram": "Instagram",
@@ -29,7 +29,7 @@
   },
   "Menu": {
       "title": "A Tavola",
-      "description1": "Die Speisekarte des Big Spuntino ist eine herzliche Hommage an Italiens kulinarisches Erbe.",
+      "description1": "Die Speisekarte des ristorante ist eine herzliche Hommage an Italiens kulinarisches Erbe.",
       "description2": "Von Insalata Caprese und Pulpo bis hin zu den knusprigsten Foccacia bietet unsere Speisekarte eine exquisite Auswahl an klassischen Spuntini (Snacks).",
       "description3": "Dies gilt natürlich auch für die Dolci: Von der traditionellen Creme die Mascarpone bis hin zu den fluffig leichten Maritozzi versüßt das Big Spuntino den Alltag mit den Churros all italiana – neapolitanische Doughnut-Stangen, warm serviert und perfekt zum Eintauchen in geschmolzene Schokolade mit besonderen Toppings.",
       "description4": "Ergänzend zum kulinarischen Erlebnis können klassische italienisch-kosmopolitische Cocktails und Weine aus Nord und Süd verkostet werden.",
@@ -44,18 +44,18 @@
   },
   "Events": {
     "title": "Eventi",
-    "paragraph1": "La vita é bella …und es gibt immer einen Grund um zu feiern. Das Big Spuntino lebt die italienische Gastfreundschaft – und das nicht nur in der Tagesbar selbst, sondern auch in eigenen privaten oder geschäftlichen Räumen.",
-    "paragraph2": "Das Big Spuntino arbeitet bereits fleißig an der Veranstaltungsreihe spettacolo…",
+    "paragraph1": "La vita é bella …und es gibt immer einen Grund um zu feiern. Das ristorante lebt die italienische Gastfreundschaft – und das nicht nur in der Tagesbar selbst, sondern auch in eigenen privaten oder geschäftlichen Räumen.",
+    "paragraph2": "Das ristorante arbeitet bereits fleißig an der Veranstaltungsreihe spettacolo…",
     "comingSoon": "Demnächst – bleib dran.",
     "contact": "Contatto"
   },
    "gallery": {
     "title": "Galerie",
-    "subtitle": "Visuelle Eindrücke von Big Spuntino"
+    "subtitle": "Visuelle Eindrücke von ristorante"
   },
    "Story": {
     "title": "Unsere Geschichten",
-    "content": "Seit Sommer 2025 ist das Big Spuntino das zweite italienische Herzstück des Gastgebers Dario Pittarello. Bereits 2015 eröffnete Dario das „Ristorante Pittarello“ am Mühlenkamp in Hamburg-Winterhude und bewirtet seither seine Gäste mit feiner, authentischer italienischen Küche. Doch damit sollte es nicht genug sein – die Chance auf den Nachbarladen konnte sich Dario nicht entgehen lassen und begrüßt zusätzlich nun seither alte wie neue Gäste in einer herzlich-lebhaften Tagesbar mit spettacoloso Snacks und Drinks aus der italienischen Küche.\n\nDas knallig rote Interieur kombiniert mit klassischen Holz- & Messing-Elementen, die harmonisch miteinander verschmelzen, bietet den Gästen die ideale Anlaufstelle für die „big times“ und das alldry long: von boozy Brunches an den Wochenenden, über daily Lunches bis hin zur earlier Aperitivo/Dinner-Hour.\n\nHier kann die mediterrane Lebensfreude am guten Genuss und guten Getränken sowie dem Feiern des Zusammenseins perfekt gelebt werden. Auf die „big times“ mit den kleinen Snacks!"
+    "content": "Seit Sommer 2025 ist das ristorante das zweite italienische Herzstück des Gastgebers Dario Pittarello. Bereits 2015 eröffnete Dario das „Ristorante Pittarello“ am Mühlenkamp in Hamburg-Winterhude und bewirtet seither seine Gäste mit feiner, authentischer italienischen Küche. Doch damit sollte es nicht genug sein – die Chance auf den Nachbarladen konnte sich Dario nicht entgehen lassen und begrüßt zusätzlich nun seither alte wie neue Gäste in einer herzlich-lebhaften Tagesbar mit spettacoloso Snacks und Drinks aus der italienischen Küche.\n\nDas knallig rote Interieur kombiniert mit klassischen Holz- & Messing-Elementen, die harmonisch miteinander verschmelzen, bietet den Gästen die ideale Anlaufstelle für die „big times“ und das alldry long: von boozy Brunches an den Wochenenden, über daily Lunches bis hin zur earlier Aperitivo/Dinner-Hour.\n\nHier kann die mediterrane Lebensfreude am guten Genuss und guten Getränken sowie dem Feiern des Zusammenseins perfekt gelebt werden. Auf die „big times“ mit den kleinen Snacks!"
   },
     "Job": {
     "title": "Lavori",
@@ -65,7 +65,7 @@
   },
   "Reservation": {
   "title": "Reservierung",
-  "description": "Reservieren Sie Ihren Tisch im Big Spuntino und genießen Sie ein unvergessliches Erlebnis.",
+  "description": "Reservieren Sie Ihren Tisch im ristorante und genießen Sie ein unvergessliches Erlebnis.",
   "guests": "Gäste",
   "time": "Zeit",
   "date": "Datum",
@@ -80,7 +80,7 @@
   "info_3": "*Bitte beachten Sie: Wir akzeptieren keine normalen Reservierungen per E-Mail. Weitere Informationen finden Sie unter"
   },
   "Contact": {
-    "description": "Das Big Spuntino ist eine klassische Tagesbar, in der die Spuntini den ganzen Tag über genossen werden können.",
+    "description": "Das ristorante ist eine klassische Tagesbar, in der die Spuntini den ganzen Tag über genossen werden können.",
     "hoursTitle": "Öffnungszeiten",
     "hours": {
       "wed_fri": "MI–FR: 11 – 23 Uhr",
