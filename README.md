@@ -1,9 +1,9 @@
-# Big Spuntino Website
+# Resturent Landing Page
 
 ## Project Overview
 
-This repository contains the source code for the **Big Spuntino** restaurant website, a modern and simple site designed to showcase an Italian day bar in Hamburg-Winterhude.  
-Inspired by the clean and elegant design of **Die Tagesbar**, with additional references from **Big Squadra** and **Bambini Restaurant**, this site is responsive, user-friendly, and visually appealing—reflecting the Mediterranean charm and Italian culinary heritage of Big Spuntino.
+This repository contains the source code for a restaurant website, a modern and simple site designed to showcase an Italian day bar in Hamburg-Winterhude.  
+Inspired by the clean and elegant design of **Die Tagesbar**, with additional references from two other websites, this site is responsive, user-friendly, and visually appealing—reflecting the Mediterranean charm and Italian culinary heritage of Big Spuntino.
 
 ---
 
