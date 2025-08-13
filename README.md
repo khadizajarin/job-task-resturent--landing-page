@@ -78,7 +78,7 @@ npm run build
 
 Deploy the site using:
 
-- [Vercel](https://job-task-bigspontino.vercel.app/de)
+- [Vercel](https://job-task-resturent--landing-page.vercel.app/en)
 
 
 > Update the README with the **live deployed link** after deployment.
